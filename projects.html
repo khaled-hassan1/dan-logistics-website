@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريعنا - دعن للخدمات اللوجستية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            خدماتنا
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
+                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
+                            <li><a class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
+                            <li><a class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
+                            <li><a class="dropdown-item" href="warehousing.html">التخزين</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">مشاريعنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>مشاريعنا</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">مشاريعنا</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="filter-buttons text-center">
+                        <button class="btn btn-outline-primary active" data-filter="all">جميع المشاريع</button>
+                        <button class="btn btn-outline-primary" data-filter="land">الشحن البري</button>
+                        <button class="btn btn-outline-primary" data-filter="sea">الشحن البحري</button>
+                        <button class="btn btn-outline-primary" data-filter="air">الشحن الجوي</button>
+                        <button class="btn btn-outline-primary" data-filter="warehouse">التخزين</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid py-5">
+        <div class="container">
+            <div class="row g-4" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="land">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 1" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">الشحن البري</span>
+                            <h4>مشروع نقل المعدات الثقيلة</h4>
+                            <p>نقل معدات ثقيلة من الرياض إلى جدة لشركة إنشاءات كبرى</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> ديسمبر 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> الرياض - جدة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="sea">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 2" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">الشحن البحري</span>
+                            <h4>شحن الحاويات إلى أوروبا</h4>
+                            <p>شحن 50 حاوية من المنتجات السعودية إلى موانئ أوروبا</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> نوفمبر 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> جدة - أوروبا</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="air">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 3" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">الشحن الجوي</span>
+                            <h4>شحن المستلزمات الطبية العاجلة</h4>
+                            <p>شحن جوي عاجل للمستلزمات الطبية إلى عدة مستشفيات</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> أكتوبر 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> الرياض - دبي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="warehouse">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 4" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">التخزين</span>
+                            <h4>مركز التوزيع الإقليمي</h4>
+                            <p>إنشاء وإدارة مركز توزيع إقليمي لشركة تجارة إلكترونية</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> سبتمبر 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="land">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 5" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">الشحن البري</span>
+                            <h4>توزيع المنتجات الغذائية</h4>
+                            <p>شبكة توزيع شاملة للمنتجات الغذائية في جميع أنحاء المملكة</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> أغسطس 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> جميع أنحاء المملكة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="sea">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project 6" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                                        <i class="fas fa-eye"></i> عرض التفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">الشحن البحري</span>
+                            <h4>استيراد المواد الخام</h4>
+                            <p>استيراد المواد الخام الصناعية من آسيا للمصانع السعودية</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> يوليو 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> آسيا - الدمام</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="project-stats py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">إحصائيات مشاريعنا</h2>
+                    <p class="section-subtitle">أرقام تعكس نجاحنا وخبرتنا</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="stat-number">150+</h3>
+                        <p>مشروع مكتمل</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="stat-number">98%</h3>
+                        <p>معدل رضا العملاء</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="stat-number">95%</h3>
+                        <p>التسليم في الوقت المحدد</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="stat-number">25+</h3>
+                        <p>دولة تم الشحن إليها</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">مشروع نقل المعدات الثقيلة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Project Details" class="img-fluid mb-3 rounded">
+                    <h6>تفاصيل المشروع:</h6>
+                    <p>تم تنفيذ مشروع نقل المعدات الثقيلة من الرياض إلى جدة لصالح إحدى شركات الإنشاءات الكبرى. شمل المشروع نقل 15 قطعة من المعدات الثقيلة بوزن إجمالي 200 طن.</p>
+                    
+                    <h6>التحديات:</h6>
+                    <ul>
+                        <li>نقل معدات بأوزان وأحجام استثنائية</li>
+                        <li>التنسيق مع السلطات المختصة للحصول على التصاريح</li>
+                        <li>ضمان السلامة أثناء النقل</li>
+                    </ul>
+                    
+                    <h6>النتائج:</h6>
+                    <ul>
+                        <li>تم التسليم في الوقت المحدد</li>
+                        <li>لم تحدث أي أضرار للمعدات</li>
+                        <li>رضا كامل من العميل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-white mb-4">هل لديك مشروع لوجستي؟</h2>
+                    <p class="text-white mb-4">تواصل معنا اليوم ودعنا نساعدك في تحقيق أهدافك اللوجستية</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-light btn-lg me-3">ابدأ مشروعك</a>
+                        <a href="tel:+966111234567" class="btn btn-outline-light btn-lg">اتصل بنا الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="logo-container mb-3">
+                            <div class="logo-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="brand-ar">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                            </div>
+                        </div>
+                        <p>شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل والتخزين.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h5>الروابط السريعة</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="projects.html">مشاريعنا</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5>خدماتنا</h5>
+                    <ul class="footer-links">
+                        <li><a href="land-shipping.html">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html">التخزين</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5>معلومات التواصل</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، المملكة العربية السعودية</p>
+                        <p><i class="fas fa-phone me-2"></i> +966 11 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
+                        <p><i class="fas fa-clock me-2"></i> الأحد - الخميس: 8:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 دعن للخدمات اللوجستية. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
