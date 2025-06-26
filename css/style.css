@@ -100,7 +100,7 @@ html {
 .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 5px;
     left: 50%;
     width: 0;
     height: 2px;
@@ -108,6 +108,7 @@ html {
     transition: var(--transition);
     transform: translateX(-50%);
 }
+
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
@@ -1412,9 +1413,9 @@ html {
 
     .navbar-nav .nav-link:hover::after,
     .navbar-nav .nav-link.active::after {
-        width: 50%;
+        width: 20%;
         position: absolute;
-        right: 0;
+
     }
 
     .stats-row {
@@ -1572,19 +1573,8 @@ html {
     }
 
     .navbar-nav .dropdown-menu .dropdown-item {
-        padding: 0.5rem 1rem;
-        /* Adjust padding for dropdown items */
-        color: var(--dark-color);
-        /* Default text color for dropdown items */
-        background-color: transparent;
-        /* Ensure no unwanted background */
+        text-align: center;
     }
 
-    .navbar-nav .dropdown-menu .dropdown-item:hover,
-    .navbar-nav .dropdown-menu .dropdown-item.active {
-        color: var(--primary-color);
-        /* Apply primary color on hover/active */
-        background-color: transparent;
-        /* No background on hover */
-    }
+
 }

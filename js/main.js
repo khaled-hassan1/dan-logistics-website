@@ -92,9 +92,18 @@ document.querySelectorAll('.service-card, .feature-card, .news-card, .project-ca
     });
 });
 
-// Mobile menu close on link click
+// Mobile menu close on link click, but not for dropdown toggles
 document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (event) { // Added 'event' parameter
+        // Check if the clicked link is a dropdown toggle
+        // Dropdown toggles have the 'data-bs-toggle="dropdown"' attribute
+        if (this.hasAttribute('data-bs-toggle') && this.getAttribute('data-bs-toggle') === 'dropdown') {
+            // It's a dropdown toggle, so don't close the main menu.
+            // Let Bootstrap's default dropdown JS handle it.
+            return;
+        }
+
+        // If it's not a dropdown toggle, proceed to close the main menu
         const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.classList.contains('show')) {
             const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
