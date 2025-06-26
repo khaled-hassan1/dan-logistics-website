@@ -246,6 +246,7 @@ html {
 .bg-about {
     background-image: url("../img/bg-about.jpg");
 }
+
 .bg-service {
     background-image: url("../img/service.jpg");
 }
@@ -1409,6 +1410,13 @@ html {
         justify-content: center;
     }
 
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+        width: 50%;
+        position: absolute;
+        right: 0;
+    }
+
     .stats-row {
         flex-direction: column;
         gap: 1rem;
@@ -1503,4 +1511,80 @@ html {
 .fa-phone:before {
     content: "\f095";
     margin: 3px;
+}
+
+/* --- Responsive Adjustments for Mobile/Tablet --- */
+@media (max-width: 991.98px) {
+
+    /* Bootstrap's 'lg' breakpoint is 992px, so max-width 991.98px covers 'md' and 'sm' */
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        /* Ensure full width for stacking */
+        align-items: center;
+        /* Center items in the flex column */
+        margin-top: 1rem;
+        /* Add some space from the toggler */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        /* Make each nav item take full width */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        /* Slightly more vertical padding for readability */
+        display: block;
+        /* Ensure the link takes full width for centering */
+    }
+
+
+
+    /* Adjust dropdown menu alignment for mobile */
+    .navbar-nav .dropdown-menu {
+        text-align: center;
+        /* Center dropdown items */
+        border: none;
+        /* Remove border if desired */
+        box-shadow: none;
+        /* Remove shadow if desired */
+        background-color: transparent;
+        /* Make dropdown background transparent */
+        padding: 0;
+        /* Remove padding */
+        position: static;
+        /* Important: Make dropdown position static in mobile */
+        width: 100%;
+        /* Full width dropdown */
+        margin-top: 0;
+        /* Remove top margin */
+        float: none;
+        /* Override any float */
+    }
+
+    .navbar-nav .dropdown-menu li {
+        width: 100%;
+        /* Ensure each dropdown item takes full width */
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        padding: 0.5rem 1rem;
+        /* Adjust padding for dropdown items */
+        color: var(--dark-color);
+        /* Default text color for dropdown items */
+        background-color: transparent;
+        /* Ensure no unwanted background */
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover,
+    .navbar-nav .dropdown-menu .dropdown-item.active {
+        color: var(--primary-color);
+        /* Apply primary color on hover/active */
+        background-color: transparent;
+        /* No background on hover */
+    }
 }
