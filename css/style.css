@@ -246,6 +246,9 @@ html {
 .bg-about {
     background-image: url("../img/bg-about.jpg");
 }
+.bg-service {
+    background-image: url("../img/service.jpg");
+}
 
 .hero-section .container {
     position: relative;
@@ -687,6 +690,39 @@ html {
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 2rem;
+    /* ADDED: For smooth transitions on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* OPTIONAL: Add a subtle default shadow to make the lift more noticeable */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* OPTIONAL: Add some padding and background for a card-like effect */
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius, 10px);
+    /* Use a custom property if defined, otherwise fallback */
+}
+
+.contact-item:hover {
+    /* ADDED: Lift the item up slightly */
+    transform: translateY(-5px);
+    /* ADDED: Enhance the shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* OPTIONAL: Slightly change background color on hover */
+    background-color: #f9f9f9;
+}
+
+/* Ensure the icon's color transitions as well if desired */
+.contact-item:hover .contact-icon {
+    /* Example: Make the icon slightly brighter or change its background */
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    /* Optional: make icon slightly bigger */
+}
+
+/* Ensure any text color inside also transitions if desired */
+.contact-item:hover h5,
+.contact-item:hover p {
+    color: var(--primary-color);
+    /* Example: change text color to primary on hover */
 }
 
 .contact-icon {
@@ -1456,4 +1492,15 @@ html {
     .sidebar .widget {
         padding: 1.5rem;
     }
+}
+
+.ltr-number {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa-phone:before {
+    content: "\f095";
+    margin: 3px;
 }
