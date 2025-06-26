@@ -252,6 +252,22 @@ html {
     background-image: url("../img/service.jpg");
 }
 
+.bg-air-shipping {
+    background-image: url("../img/air-shipping.jpg");
+}
+
+.bg-land-shipping {
+    background-image: url("../img/bg-land-shipping.jpg");
+}
+
+.bg-sea-shipping {
+    background-image: url("../img/bg-sea-shipping.jpg");
+}
+
+.bg-warehousing {
+    background-image: url("../img/bg-warehousing.jpg");
+}
+
 .hero-section .container {
     position: relative;
     z-index: 2;
@@ -1577,4 +1593,9 @@ html {
     }
 
 
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--primary-color) !important;
 }
