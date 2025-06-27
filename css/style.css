@@ -1168,6 +1168,7 @@ html {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .social-link {
@@ -1516,6 +1517,10 @@ html {
 
     .sidebar .widget {
         padding: 1.5rem;
+    }
+
+    .explain-service {
+        text-align: center;
     }
 }
 
