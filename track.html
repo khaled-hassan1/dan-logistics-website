@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,12 @@
 </head>
 
 <body>
-    <!-- Navigation (Same as index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" dir="rtl">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="دعن للخدمات اللوجستية">
                     <div class="logo-text">
                         <span class="brand-ar">دعن للخدمات اللوجستية</span>
                         <span class="brand-en">DAN LOGISTIC SERVICES</span>
@@ -61,55 +62,56 @@
         </div>
     </nav>
 
-    
- <section class="hero-section hero-track-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="hero-overlay bg-track"></div>
+
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="col-lg-6">
                     <div class="hero-content">
                         <h1 class="hero-title">تتبع شحنتك</h1>
                         <p class="hero-subtitle">
                             أدخل رقم التتبع الخاص بك للحصول على أحدث المعلومات حول حالة شحنتك.
                         </p>
-                        <form id="trackForm" class="d-flex justify-content-center mt-4">
-                            <div class="input-group tracking-input-group">
-                                <input type="text" class="form-control" placeholder="أدخل رقم التتبع الخاص بك"
-                                    aria-label="أدخل رقم التتبع الخاص بك" id="trackingNumberInput">
-                                <button class="btn btn-primary" type="submit">تتبع الآن</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Tracking Section -->
-    <section class="order-tracking-section py-5 mt-5">
+    <!-- Tracking Results Section -->
+    <section class="order-tracking-section py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-primary text-white">
-                            <h3 class="mb-0 text-center">تتبع حالة شحنتك</h3>
+                <div class="col-lg-10">
+                    <div class="card shadow-sm tracking-card">
+                        <div class="btn-primary text-white text-center" style="
+    padding: 10px;
+    border-radius: 0;
+">
+                            <h3 class="mb-0">تتبع حالة شحنتك</h3>
                         </div>
                         <div class="card-body">
                             <form id="trackingForm">
                                 <div class="mb-4">
                                     <label for="referenceNumber" class="form-label">رقم المرجع (الرفرنس)</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="referenceNumber" 
-                                               placeholder="أدخل رقم المرجع المكون من 10 أرقام" required>
-                                        <button class="btn btn-primary" type="submit">تتبع</button>
+                                        <input type="text" class="form-control" id="referenceNumber"
+                                            placeholder="أدخل رقم المرجع المكون من 10 أرقام" required>
+                                        <button class="btn btn-primary" type="submit">
+                                            <i class="fas fa-search me-2"></i> تتبع
+                                        </button>
                                     </div>
-                                    <small class="text-muted">يمكنك العثور على رقم المرجع في إيصال الشحن أو البريد الإلكتروني الخاص بك</small>
+                                    <small class="text-muted">يمكنك العثور على رقم المرجع في إيصال الشحن أو البريد
+                                        الإلكتروني الخاص بك</small>
                                 </div>
                             </form>
 
                             <div id="trackingResult" class="d-none">
-                                <h4 class="text-center mb-4">حالة الشحنة: <span id="orderStatus" class="badge bg-success">في الطريق</span></h4>
-                                
+                                <h4 class="text-center mb-4">حالة الشحنة: <span id="orderStatus"
+                                        class="badge bg-success">في الطريق</span></h4>
+
                                 <div class="timeline">
                                     <div class="timeline-step completed">
                                         <div class="timeline-icon">
@@ -117,129 +119,70 @@
                                         </div>
                                         <div class="timeline-content">
                                             <h6>تم استلام الطلب</h6>
-                                            <p>12 يوليو 2025 - 10:30 ص</p>
+                                            <p class="text-muted">12 يوليو 2025 - 10:30 ص</p>
                                             <p>تم استلام الشحنة في مستودع الرياض</p>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="timeline-step completed">
                                         <div class="timeline-icon">
                                             <i class="fas fa-check"></i>
                                         </div>
                                         <div class="timeline-content">
                                             <h6>معالجة الطلب</h6>
-                                            <p>12 يوليو 2025 - 2:15 م</p>
+                                            <p class="text-muted">12 يوليو 2025 - 2:15 م</p>
                                             <p>تم تجهيز الشحنة للشحن</p>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="timeline-step active">
                                         <div class="timeline-icon">
                                             <i class="fas fa-truck"></i>
                                         </div>
                                         <div class="timeline-content">
                                             <h6>في الطريق</h6>
-                                            <p>13 يوليو 2025 - 9:00 ص</p>
+                                            <p class="text-muted">13 يوليو 2025 - 9:00 ص</p>
                                             <p>الشحنة في طريقها إلى وجهتها النهائية</p>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="timeline-step">
                                         <div class="timeline-icon">
                                             <i class="fas fa-home"></i>
                                         </div>
                                         <div class="timeline-content">
                                             <h6>تسليم</h6>
-                                            <p>متوقع: 14 يوليو 2025</p>
+                                            <p class="text-muted">متوقع: 14 يوليو 2025</p>
                                             <p>سيتم تسليم الشحنة خلال يوم العمل</p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="order-details mt-5">
-                                    <h5 class="mb-3">تفاصيل الشحنة</h5>
+                                    <h5 class="mb-4 text-center">تفاصيل الشحنة</h5>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <p><strong>رقم المرجع:</strong> <span id="detailRefNumber">DAN-78945612</span></p>
-                                            <p><strong>تاريخ الشحن:</strong> 12 يوليو 2025</p>
-                                            <p><strong>الوزن:</strong> 25 كجم</p>
+                                        <div class="col-md-6 mb-3 mb-md-0">
+                                            <div class="p-3 bg-light rounded">
+                                                <p><strong>رقم المرجع:</strong> <span
+                                                        id="detailRefNumber">DAN-78945612</span></p>
+                                                <p><strong>تاريخ الشحن:</strong> 12 يوليو 2025</p>
+                                                <p><strong>الوزن:</strong> 25 كجم</p>
+                                            </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <p><strong>من:</strong> الرياض، المملكة العربية السعودية</p>
-                                            <p><strong>إلى:</strong> جدة، المملكة العربية السعودية</p>
-                                            <p><strong>نوع الخدمة:</strong> الشحن البري السريع</p>
+                                            <div class="p-3 bg-light rounded">
+                                                <p><strong>من:</strong> الرياض، المملكة العربية السعودية</p>
+                                                <p><strong>إلى:</strong> جدة، المملكة العربية السعودية</p>
+                                                <p><strong>نوع الخدمة:</strong> الشحن البري السريع</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h3 class="text-center mb-4">أسئلة شائعة حول تتبع الشحنات</h3>
-                    
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    أين يمكنني العثور على رقم المرجع؟
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    يمكنك العثور على رقم المرجع في:
-                                    <ul>
-                                        <li>إيصال الشحن الذي حصلت عليه عند تسليم الشحنة</li>
-                                        <li>البريد الإلكتروني التأكيدي الذي تم إرساله إليك عند إنشاء الشحنة</li>
-                                        <li>في حسابك على موقعنا إذا كنت قد سجلت الدخول عند إنشاء الشحنة</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    كم مرة يتم تحديث حالة الشحنة؟
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    يتم تحديث حالة الشحنة في كل مرة يتم فيها تغيير حالة الشحنة في نظامنا. عادةً ما يتم التحديث عند:
-                                    <ul>
-                                        <li>استلام الشحنة في مستودعنا</li>
-                                        <li>بدء معالجة الشحنة</li>
-                                        <li>شحن الشحنة</li>
-                                        <li>وصول الشحنة إلى مراكز التوزيع</li>
-                                        <li>خروج الشحنة للتسليم</li>
-                                        <li>تسليم الشحنة بنجاح</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    ماذا أفعل إذا لم يتم تحديث حالة الشحنة لفترة طويلة؟
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    إذا لم يتم تحديث حالة الشحنة لأكثر من 48 ساعة، نوصي بما يلي:
-                                    <ol>
-                                        <li>التحقق مرة أخرى من رقم المرجع للتأكد من صحته</li>
-                                        <li>انتظر بضع ساعات ثم حاول مرة أخرى، فقد تكون هناك تأخيرات في تحديث النظام</li>
-                                        <li>إذا استمرت المشكلة، يرجى <a href="contact.html">الاتصال بنا</a> وسيسعد فريق خدمة العملاء بمساعدتك</li>
-                                    </ol>
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-outline-primary" id="trackAnotherBtn">
+                                        <i class="fas fa-redo me-2"></i>تتبع شحنة أخرى
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -249,20 +192,27 @@
         </div>
     </section>
 
-    <!-- Footer (Same as index.html) -->
-    <footer class="footer-section bg-dark text-light py-5">
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-light py-5 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
                         <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <img src="img/logo.png" alt="logo">
-                            <div class="logo-text text-center text-lg-end">
-                                <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                            </div>
+                            <a class="navbar-brand" href="index.html">
+                                <div class="logo-container">
+                                    <img src="img\logo.png" alt="logo">
+                                    <div class="logo-text text-center text-lg-end">
+                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
+                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة...</p>
+                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
+                            الجودة في الشحن والنقل
+                            والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
+                            بضائعك إلى وجهتها بأمان وكفاءة.</p>
                         <div class="social-links d-flex justify-content-center justify-content-lg-start">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -279,7 +229,6 @@
                         <li><a href="about.html">من نحن</a></li>
                         <li><a href="services.html">خدماتنا</a></li>
                         <li><a href="contact.html">اتصل بنا</a></li>
-                        <li><a href="track-order.html">تتبع الطلب</a></li>
                     </ul>
                 </div>
 
@@ -297,7 +246,7 @@
                     <h5>معلومات التواصل</h5>
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699</span></p>
+                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
                         <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
                         <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
                     </div>
@@ -316,26 +265,41 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
     <script>
         // Handle form submission
-        document.getElementById('trackingForm').addEventListener('submit', function(e) {
+        document.getElementById('trackingForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const refNumber = document.getElementById('referenceNumber').value;
-            
-            // Here you would normally make an API call to get tracking info
-            // For demo purposes, we'll just show the result
-            document.getElementById('trackingResult').classList.remove('d-none');
-            document.getElementById('detailRefNumber').textContent = refNumber;
-            
-            // Scroll to results
-            document.getElementById('trackingResult').scrollIntoView({ behavior: 'smooth' });
+
+            if (refNumber) {
+                document.getElementById('trackingResult').classList.remove('d-none');
+                document.getElementById('detailRefNumber').textContent = refNumber;
+                document.getElementById('trackingResult').scrollIntoView({ behavior: 'smooth' });
+            }
         });
-        
+
+        // Track another shipment
+        document.getElementById('trackAnotherBtn').addEventListener('click', function () {
+            document.getElementById('trackingResult').classList.add('d-none');
+            document.getElementById('referenceNumber').value = '';
+            document.getElementById('referenceNumber').focus();
+        });
+
+        // Hero form submission
+        document.getElementById('trackForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const trackingNumber = document.getElementById('trackingNumberInput').value;
+
+            if (trackingNumber) {
+                document.getElementById('referenceNumber').value = trackingNumber;
+                document.getElementById('trackingForm').dispatchEvent(new Event('submit'));
+            }
+        });
+
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
