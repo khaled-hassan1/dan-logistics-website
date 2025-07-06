@@ -459,52 +459,58 @@ if (heroTrackForm) heroTrackForm.addEventListener('submit', handleHeroFormSubmit
 
 
 // --- Language Switcher ---
+// --- Language Switcher ---
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
     const languageButton = select("#languageButton");
 
     const elementsToTranslate = {
-        "homeNav": { en: "Home", ar: "الرئيسية" },
-        "servicesNav": { en: "Services", ar: "خدماتنا" },
-        "allServices": { en: "All Services", ar: "جميع الخدمات" },
-        "landShipping": { en: "Land Shipping", ar: "الشحن البري" },
-        "seaShipping": { en: "Sea Shipping", ar: "الشحن البحري" },
-        "airShipping": { en: "Air Shipping", ar: "الشحن الجوي" },
-        "warehousing": { en: "Warehousing", ar: "التخزين" },
-        "trackNav": { en: "Track Order", ar: "تتبع الطلب" },
-        "aboutNav": { en: "About Us", ar: "من نحن" },
-        "contactNav": { en: "Contact Us", ar: "اتصل بنا" },
-        "languageButton": { en: "AR", ar: "EN" }
+        homeNav: { en: "Home", ar: "الرئيسية" },
+        servicesNav: { en: "Services", ar: "خدماتنا" },
+        allServices: { en: "All Services", ar: "جميع الخدمات" },
+        landShipping: { en: "Land Shipping", ar: "الشحن البري" },
+        seaShipping: { en: "Sea Shipping", ar: "الشحن البحري" },
+        airShipping: { en: "Air Shipping", ar: "الشحن الجوي" },
+        warehousing: { en: "Warehousing", ar: "التخزين" },
+        trackNav: { en: "Track Order", ar: "تتبع الطلب" },
+        aboutNav: { en: "About Us", ar: "من نحن" },
+        contactNav: { en: "Contact Us", ar: "اتصل بنا" },
+        languageButton: { en: "AR", ar: "EN" }
     };
 
     let currentLanguage = localStorage.getItem("language") || "ar";
 
     function updateLanguage() {
+        // بدّل النصوص
         for (const id in elementsToTranslate) {
-            const element = select(`#${id}`); // Use the select utility
-            if (element) {
-                element.textContent = elementsToTranslate[id][currentLanguage];
-            }
+            const el = select(`#${id}`);
+            if (el) el.textContent = elementsToTranslate[id][currentLanguage];
         }
 
-        document.documentElement.lang = currentLanguage === "en" ? "en" : "ar";
-        document.body.style.textAlign = currentLanguage === "en" ? "left" : "right";
+        // حدِّد اللغة والاتجاه مرة واحدة
+        const isEn = currentLanguage === "en";
+        document.documentElement.lang = isEn ? "en" : "ar";
+        document.documentElement.dir = isEn ? "ltr" : "rtl";
+        document.body.style.textAlign = isEn ? "left" : "right";
+
+        // زر التبديل
         if (languageButton) {
-            languageButton.textContent = elementsToTranslate["languageButton"][currentLanguage];
+            languageButton.textContent = elementsToTranslate.languageButton[currentLanguage];
         }
     }
 
     if (languageButton) {
-        languageButton.addEventListener("click", function () {
+        languageButton.addEventListener("click", () => {
             currentLanguage = currentLanguage === "en" ? "ar" : "en";
             localStorage.setItem("language", currentLanguage);
             updateLanguage();
-            console.log(localStorage.getItem("language"));
+            console.log(`Language set to ${currentLanguage}`);
         });
     }
 
-    updateLanguage();
+    updateLanguage();  // تشغيل أولي
 });
+
 
 
 // Console messages
