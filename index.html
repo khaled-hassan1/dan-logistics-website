@@ -31,33 +31,53 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                        <a id="homeNav" class="nav-link active" href="index.html" data-ar="الرئيسية"
+                            data-en="Home">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" data-ar="خدماتنا"
+                            data-en="Services">
                             خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
-                            <li><a class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a class="dropdown-item" href="warehousing.html">التخزين</a></li>
+                            <li><a class="dropdown-item" href="services.html" data-ar="جميع الخدمات"
+                                    data-en="All Services">جميع الخدمات</a></li>
+                            <li><a class="dropdown-item" href="land-shipping.html" data-ar="الشحن البري"
+                                    data-en="Land Shipping">الشحن البري</a></li>
+                            <li><a class="dropdown-item" href="sea-shipping.html" data-ar="الشحن البحري"
+                                    data-en="Sea Shipping">الشحن البحري</a></li>
+                            <li><a class="dropdown-item" href="air-shipping.html" data-ar="الشحن الجوي"
+                                    data-en="Air Shipping">الشحن الجوي</a></li>
+                            <li><a class="dropdown-item" href="warehousing.html" data-ar="التخزين"
+                                    data-en="Warehousing">التخزين</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="track.html">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" data-ar="تتبع الطلب" data-en="Track Order">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="about.html" data-ar="من نحن" data-en="About Us">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        <a class="nav-link" href="contact.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
                     </li>
                 </ul>
+                <button id="languageButton" class="btn btn-sm btn-outline-secondary ms-2 d-none d-lg-block"
+                    aria-label="Toggle language">
+                    <span class="lang-ar">EN</span>
+                    <span class="lang-en d-none">AR</span>
+                </button>
+
+                <button id="languageButton" class="btn btn-sm btn-outline-secondary mt-3 d-lg-none w-100"
+                    aria-label="Toggle language">
+                    <span class="lang-ar">EN</span>
+                    <span class="lang-en d-none">AR</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -83,20 +103,111 @@
         </div>
     </section>
 
-    <section class="track-shipment-home py-5">
+
+    <!-- Tracking Results Section -->
+    <section class="order-tracking-section py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="track-card p-4 shadow-sm rounded text-center">
-                        <h3 class="mb-3">تتبع شحنتك</h3>
-                        <p class="text-muted mb-4">أدخل رقم تتبع الشحنة الخاص بك للحصول على آخر التحديثات.</p>
-                        <form active="track.html" method="GET">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="أدخل رقم التتبع"
-                                    aria-label="أدخل رقم التتبع" name="trackingNumber" id="homeTrackingNumber">
-                                <button class="btn btn-primary" type="submit">تتبع الآن</button>
+                <div class="col-lg-10">
+                    <div class="card shadow-sm tracking-card">
+                        <div class="btn-primary text-white text-center" style="padding: 10px;border-radius: 0;">
+                            <h3 class="mb-0">تتبع حالة شحنتك</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="trackingForm">
+                                <div class="mb-4">
+                                    <label for="referenceNumber" class="form-label">رقم المرجع (الرفرنس)</label>
+                                    <div class="input-group flex items-center gap-2"> <input type="text"
+                                            class="form-control flex-grow" id="referenceNumber"
+                                            placeholder="أدخل رقم المرجع المكون من 10 أرقام" required> <button
+                                            class="btn btn-primary" type="submit">
+                                            <i class="fas fa-search me-2"></i> تتبع
+                                        </button>
+                                    </div>
+
+                                    <small class="text-muted">يمكنك العثور على رقم المرجع في إيصال الشحن أو البريد
+                                        الإلكتروني الخاص بك</small>
+                                </div>
+                            </form>
+
+                            <div id="trackingResult" class="d-none">
+                                <h4 class="text-center mb-4">حالة الشحنة: <span id="orderStatus"
+                                        class="badge bg-success">في الطريق</span></h4>
+
+                                <div class="timeline">
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h6>تم استلام الطلب</h6>
+                                            <p class="text-muted">12 يوليو 2025 - 10:30 ص</p>
+                                            <p>تم استلام الشحنة في مستودع الرياض</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h6>معالجة الطلب</h6>
+                                            <p class="text-muted">12 يوليو 2025 - 2:15 م</p>
+                                            <p>تم تجهيز الشحنة للشحن</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-step active">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-truck"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h6>في الطريق</h6>
+                                            <p class="text-muted">13 يوليو 2025 - 9:00 ص</p>
+                                            <p>الشحنة في طريقها إلى وجهتها النهائية</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-step">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h6>تسليم</h6>
+                                            <p class="text-muted">متوقع: 14 يوليو 2025</p>
+                                            <p>سيتم تسليم الشحنة خلال يوم العمل</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-details mt-5">
+                                    <h5 class="mb-4 text-center">تفاصيل الشحنة</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3 mb-md-0">
+                                            <div class="p-3 bg-light rounded">
+                                                <p><strong>رقم المرجع:</strong> <span
+                                                        id="detailRefNumber">DAN-78945612</span></p>
+                                                <p><strong>تاريخ الشحن:</strong> 12 يوليو 2025</p>
+                                                <p><strong>الوزن:</strong> 25 كجم</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="p-3 bg-light rounded">
+                                                <p><strong>من:</strong> الرياض، المملكة العربية السعودية</p>
+                                                <p><strong>إلى:</strong> جدة، المملكة العربية السعودية</p>
+                                                <p><strong>نوع الخدمة:</strong> الشحن البري السريع</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-outline-primary" id="trackAnotherBtn">
+                                        <i class="fas fa-redo me-2"></i>تتبع شحنة أخرى
+                                    </button>
+                                </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

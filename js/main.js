@@ -165,6 +165,114 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
 
+// Handle form submission
+document.getElementById('trackingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const refNumber = document.getElementById('referenceNumber').value;
+
+    if (refNumber) {
+        document.getElementById('trackingResult').classList.remove('d-none');
+        document.getElementById('detailRefNumber').textContent = refNumber;
+        document.getElementById('trackingResult').scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+// Track another shipment
+document.getElementById('trackAnotherBtn').addEventListener('click', function () {
+    document.getElementById('trackingResult').classList.add('d-none');
+    document.getElementById('referenceNumber').value = '';
+    document.getElementById('referenceNumber').focus();
+});
+
+// Hero form submission
+document.getElementById('trackForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const trackingNumber = document.getElementById('trackingNumberInput').value;
+
+    if (trackingNumber) {
+        document.getElementById('referenceNumber').value = trackingNumber;
+        document.getElementById('trackingForm').dispatchEvent(new Event('submit'));
+    }
+});
+
+
+// Lang
+document.addEventListener("DOMContentLoaded", function () {
+    // "use strict"; // Apply to this scope
+    const languageButton = document.getElementById("languageButton");
+
+    const elementsToTranslate = {
+        "pageTitle": {
+            en: "",
+            ar: ""
+        },
+        // Gallery Section
+
+        "filterAll": { en: "All", ar: "الكل" },
+
+        // Navigation
+        "homeNav": { en: "Home", ar: "الرئيسية" },
+        "homeNav2": { en: "Home", ar: "الرئيسية" },
+        "homeNav3": { en: "Home", ar: "الرئيسية" },
+        "homeNav4": { en: "Home", ar: "الرئيسية" },
+        "homeNav5": { en: "Home", ar: "الرئيسية" },
+        "aboutNav": { en: "About", ar: "من أنا" },
+        "aboutNav2": { en: "About", ar: "من أنا" },
+        "aboutNav3": { en: "About", ar: "من أنا" },
+        "aboutNav4": { en: "About", ar: "من أنا" },
+        "aboutNav5": { en: "About", ar: "من أنا" },
+        "projects": { en: "Projects", ar: "المشاريع" },
+        "projects2": { en: "Projects", ar: "المشاريع" },
+        "projects3": { en: "Projects", ar: "المشاريع" },
+        "projects4": { en: "Projects", ar: "المشاريع" },
+        "servicesNav": { en: "We offer", ar: "نقدم" },
+        "servicesNav2": { en: "We offer", ar: "نقدم" },
+        "servicesNav3": { en: "We offer", ar: "نقدم" },
+        "servicesNav4": { en: "We offer", ar: "نقدم" },
+        "contactNav": { en: "Contact", ar: "اتصل" },
+        "contactNav2": { en: "Contact", ar: "اتصل" },
+        "contactNav3": { en: "Contact", ar: "اتصل" },
+        "contactNav4": { en: "Contact", ar: "اتصل" },
+        "contactNav5": { en: "Contact", ar: "اتصل" },
+        "contactNav6": { en: "Contact", ar: "اتصل" },
+        "contactNav7": { en: "Contact", ar: "اتصل" },
+        "contactNav8": { en: "Contact", ar: "اتصل" },
+        "languageButton": { en: "ع", ar: "EN" },
+
+    };
+
+    let currentLanguage = localStorage.getItem("language") || "ar";
+
+    function updateLanguage() {
+        for (const id in elementsToTranslate) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = elementsToTranslate[id][currentLanguage];
+            }
+        }
+
+        // تحديث لغة الصفحة واتجاه النص
+        document.documentElement.lang = currentLanguage === "en" ? "en" : "ar";
+        // document.style.direction = currentLanguage === "en" ? "ltr" : "rtl";
+        document.body.style.textAlign = currentLanguage === "en" ? "left" : "right";
+        if (languageButton) {
+            languageButton.textContent = elementsToTranslate["languageButton"][currentLanguage];
+        }
+
+    }
+
+    languageButton.addEventListener("click", function () {
+        currentLanguage = currentLanguage === "en" ? "ar" : "en";
+        localStorage.setItem("language", currentLanguage);
+        updateLanguage();
+        console.log(localStorage.getItem("language"));
+    });
+
+    updateLanguage(); // تطبيق اللغة المختارة عند تحميل الصفحة
+});
+
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 // Console message
 console.log('🚚 مرحباً بك في موقع دعن للخدمات اللوجستية!');
 console.log('📧 للتواصل: info@danlogistics.com');
