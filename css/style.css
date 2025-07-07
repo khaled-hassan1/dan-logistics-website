@@ -1734,3 +1734,58 @@ html[lang="en"] .dropdown-menu .dropdown-item:hover {
 html[lang="ar"] .auto-ma {
     margin-left: 5px;
 }
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    /* Size of the button */
+    height: 60px;
+    /* Size of the button */
+    bottom: 40px;
+    /* Distance from the bottom of the viewport */
+    left: 40px;
+    /* Changed from 'right' to 'left' */
+    background-color: #25D366;
+    /* WhatsApp green color */
+    color: #FFF;
+    /* Icon color */
+    border-radius: 50%;
+    /* Makes it a perfect circle */
+    text-align: center;
+    font-size: 28px;
+    /* Icon size */
+    box-shadow: 2px 2px 3px #999;
+    /* Subtle shadow */
+    z-index: 1000;
+    /* Ensures it stays above other content */
+    display: flex;
+    /* Use flexbox for perfect centering of the icon */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+    text-decoration: none;
+    /* Remove underline for the link */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    /* Darker green on hover */
+    color: #FFF;
+    /* Ensure icon color stays white on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+        /* Changed from 'right' to 'left' */
+        font-size: 24px;
+    }
+}
