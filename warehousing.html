@@ -14,53 +14,61 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" dir="rtl">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-image-placeholder"></div>
                     <div class="logo-text">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                        <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
                     </div>
                 </div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">الرئيسية</a>
+                        <a id="homeNav" class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
+                            <span id="servicesNav">خدماتنا</span> <i class="fas fa-chevron-down ms-1"
+                                style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
-                            <li><a class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a class="dropdown-item active" href="warehousing.html">التخزين</a></li>
+                            <li><a id="allServices" class="dropdown-item" href="services.html">جميع الخدمات</a></li>
+                            <li><a id="landShipping" class="dropdown-item" href="land-shipping.html">الشحن البري</a>
+                            </li>
+                            <li><a id="seaShipping" class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
+                            <li><a id="airShipping" class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
+                            <li><a id="warehousing" class="dropdown-item active" href="warehousing.html">التخزين</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="track.html">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
+                    <div class="d-flex my-2 my-lg-0 justify-content-center">
+                        <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
 
+    
     <section class="hero-section">
         <div class="hero-overlay bg-warehousing"></div>
 
@@ -68,13 +76,14 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">التخزين</h1>
-                        <p class="hero-subtitle">
+                        <h1 class="hero-title" id="warehousingHeroTitle">التخزين</h1>
+                        <p class="hero-subtitle" id="warehousingHeroSubtitle">
                             مرافق تخزين حديثة وآمنة لجميع احتياجاتك اللوجستية، مع حلول مرنة وإدارة متقدمة للمخزون تضمن
                             سلامة بضائعك وكفاءة عمليات سلسلة التوريد الخاصة بك.
                         </p>
                         <div class="hero-buttons">
-                            <a href="services.html" class="btn btn-primary btn-lg">استكشف خدماتنا</a>
+                            <a href="services.html" class="btn btn-primary btn-lg"
+                                id="warehousingExploreServicesButton">استكشف خدماتنا</a>
                         </div>
                     </div>
                 </div>
@@ -90,63 +99,75 @@
                         class=" img-fluid rounded shadow" alt="Warehousing and Storage">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="section-title text-start">حلول التخزين المتكاملة</h2>
-                    <p class="explain-service">توفر دعن للخدمات اللوجستية مرافق تخزين حديثة وآمنة ومجهزة بالكامل للتعامل
+                    <h2 class="section-title text-start" id="warehousingDetailTitle">حلول التخزين المتكاملة</h2>
+                    <p class="explain-service" id="warehousingExplain1">توفر دعن للخدمات اللوجستية مرافق تخزين حديثة
+                        وآمنة ومجهزة بالكامل للتعامل
                         مع مجموعة واسعة من البضائع، بدءًا من السلع الجافة وحتى المنتجات التي تتطلب درجات حرارة محكمة.
                         نحن ندرك أن التخزين الفعال هو جزء أساسي من سلسلة التوريد الناجحة، ولذلك نوفر حلولًا متكاملة تلبي
                         أعلى معايير الجودة والأمان.</p>
-                    <p>من التخزين طويل الأجل إلى إدارة المخزون، نقدم حلولًا مرنة لتلبية متطلبات سلسلة التوريد الخاصة بك.
+                    <p id="warehousingExplain2">من التخزين طويل الأجل إلى إدارة المخزون، نقدم حلولًا مرنة لتلبية متطلبات
+                        سلسلة التوريد الخاصة بك.
                         سواء كنت بحاجة إلى مساحة تخزين مؤقتة أو حلول لوجستية متكاملة تشمل التوزيع، فإن مستودعاتنا مجهزة
                         لتقديم أفضل خدمة ممكنة، مما يقلل التكاليف التشغيلية ويزيد من كفاءة سلسلة التوريد الخاصة بك.</p>
                     <ul class="list-unstyled service-features mt-4">
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> مستودعات آمنة ومراقبة على مدار
+                        <li id="warehousingDetailFeature1"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            مستودعات آمنة ومراقبة على مدار
                             الساعة: مستودعاتنا مجهزة بأحدث أنظمة المراقبة الأمنية وكاميرات المراقبة على مدار 24 ساعة
                             طوال أيام الأسبوع، لضمان حماية بضائعك من السرقة أو التلف.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> أنظمة إدارة مخزون متقدمة (WMS):
+                        <li id="warehousingDetailFeature2"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            أنظمة إدارة مخزون متقدمة (WMS):
                             نستخدم أنظمة متطورة لإدارة المستودعات (WMS) توفر تتبعًا دقيقًا للمخزون، تقارير فورية، وإدارة
                             سلسة لتدفق البضائع داخل وخارج المستودع.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> حلول تخزين مبردة (عند الطلب):
+                        <li id="warehousingDetailFeature3"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            حلول تخزين مبردة (عند الطلب):
                             نوفر مناطق تخزين مبردة ومتحكم بها حراريًا، مصممة خصيصًا للبضائع التي تتطلب درجات حرارة معينة
                             مثل المنتجات الغذائية والأدوية والكيماويات الحساسة.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> خدمات التعبئة والتغليف وإعادة
+                        <li id="warehousingDetailFeature4"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            خدمات التعبئة والتغليف وإعادة
                             التعبئة: نقدم خدمات تعبئة وتغليف احترافية، بالإضافة إلى إمكانية إعادة التعبئة والتسمية،
                             لضمان أن بضائعك جاهزة للشحن أو التوزيع عند الطلب.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> عمليات استلام، تخزين، وشحن فعالة:
+                        <li id="warehousingDetailFeature5"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            عمليات استلام، تخزين، وشحن فعالة:
                             فريقنا المتخصص يدير عمليات استلام البضائع، وتخزينها بكفاءة، وتنفيذ طلبات الشحن والتوزيع بدقة
                             وسرعة، لضمان تدفق سلسلة التوريد بسلاسة.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> حلول تخزين مخصصة لجميع الصناعات:
+                        <li id="warehousingDetailFeature6"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            حلول تخزين مخصصة لجميع الصناعات:
                             سواء كنت في قطاع التجزئة، الصناعة، الأدوية، أو أي قطاع آخر، فإننا نقدم حلول تخزين مرنة
                             ومصممة خصيصًا لتلبية متطلبات أعمالك الفريدة.</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary mt-4">اطلب عرض سعر</a>
+                    <a href="contact.html" class="btn btn-primary mt-4" id="warehousingRequestQuoteButton">اطلب عرض
+                        سعر</a>
                 </div>
             </div>
 
             <div class="row mt-5">
                 <div class="col-12">
-                    <h3 class="text-center mb-4">لماذا تختار خدمات التخزين لدينا؟</h3>
+                    <h3 class="text-center mb-4" id="whyChooseWarehousingTitle">لماذا تختار خدمات التخزين لدينا؟</h3>
                     <div class="row text-center service-steps">
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-lock-open fa-3x icon-custom-color mb-3"></i>
-                                <h5>1. أمان لا مثيل له</h5>
-                                <p>نحن نولي الأولوية القصوى لأمان بضائعك. مستودعاتنا مجهزة بأحدث أنظمة المراقبة، التحكم
+                                <h5 id="warehousingFeatureCard1Title">1. أمان لا مثيل له</h5>
+                                <p id="warehousingFeatureCard1Text">نحن نولي الأولوية القصوى لأمان بضائعك. مستودعاتنا
+                                    مجهزة بأحدث أنظمة المراقبة، التحكم
                                     في الدخول، وفريق أمني يعمل على مدار 24 ساعة لضمان حماية ممتلكاتك الثمينة.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-chart-line fa-3x icon-custom-color mb-3"></i>
-                                <h5>2. إدارة فعالة</h5>
-                                <p>باستخدام أنظمة إدارة المخزون المتقدمة (WMS)، نوفر لك تحكمًا كاملًا ورؤية واضحة
+                                <h5 id="warehousingFeatureCard2Title">2. إدارة فعالة</h5>
+                                <p id="warehousingFeatureCard2Text">باستخدام أنظمة إدارة المخزون المتقدمة (WMS)، نوفر لك
+                                    تحكمًا كاملًا ورؤية واضحة
                                     لمخزونك في الوقت الفعلي، مما يتيح لك اتخاذ قرارات مستنيرة وتحسين كفاءة عملياتك.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-hand-holding-usd fa-3x icon-custom-color mb-3"></i>
-                                <h5>3. حلول مرنة</h5>
-                                <p>نقدم خيارات تخزين تناسب جميع الأحجام والميزانيات، سواء كنت تحتاج إلى مساحة صغيرة
+                                <h5 id="warehousingFeatureCard3Title">3. حلول مرنة</h5>
+                                <p id="warehousingFeatureCard3Text">نقدم خيارات تخزين تناسب جميع الأحجام والميزانيات،
+                                    سواء كنت تحتاج إلى مساحة صغيرة
                                     لبضعة أيام أو مستودعًا كبيرًا لتخزين طويل الأمد، مع إمكانية التوسع حسب نمو أعمالك.
                                 </p>
                             </div>
@@ -154,45 +175,43 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="cta-section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">هل تبحث عن حلول تخزين موثوقة وآمنة تضمن سلامة وكفاءة بضائعك؟</h2>
-                    <p class="text-white mb-4">اتصل بنا اليوم لمناقشة احتياجاتك اللوجستية وتوفير المساحة المناسبة لك، مع
+                    <h2 class="text-white mb-4" id="warehousingCtaTitle">هل تبحث عن حلول تخزين موثوقة وآمنة تضمن سلامة
+                        وكفاءة بضائعك؟</h2>
+                    <p class="text-white mb-4" id="warehousingCtaSubtitle">اتصل بنا اليوم لمناقشة احتياجاتك اللوجستية
+                        وتوفير المساحة المناسبة لك، مع
                         فريقنا المتخصص الجاهز لتقديم الدعم.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">احجز مساحة الآن</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg" id="warehousingCtaButton">احجز مساحة
+                            الآن</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section bg-dark text-light py-5 ">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <a class="navbar-brand" href="index.html">
-                                <div class="logo-container">
-                                    <img src="img\logo.png" alt="logo">
-                                    <div class="logo-text text-center text-lg-end">
-                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="logo-container  d-flex justify-content-center mb-2">
+                            <div class="logo-image-placeholder"></div>
+                            <div class="logo-text">
+                                <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
+                            </div>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
-                            الجودة في الشحن والنقل
+                        <p class="text-center text-lg-center" id="footerDescription">شريكك الموثوق في الحلول اللوجستية
+                            المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل
                             والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
                             بضائعك إلى وجهتها بأمان وكفاءة.</p>
-                        <div class="social-links d-flex justify-content-center justify-content-lg-start">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-center">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -202,32 +221,38 @@
                 </div>
 
                 <div class="col-lg-2 text-center">
-                    <h5>الروابط السريعة</h5>
+                    <h5 id="quickLinksTitle">الروابط السريعة</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="index.html" id="footerHomeLink">الرئيسية</a></li>
+                        <li><a href="about.html" id="footerAboutLink">من نحن</a></li>
+                        <li><a href="services.html" id="footerServicesLink">خدماتنا</a></li>
+                        <li><a href="track.html" id="footerTrackLink">تتبع الطلب</a></li>
+                        <li><a href="contact.html" id="footerContactLink">اتصل بنا</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>خدماتنا</h5>
+                    <h5 id="servicesTitle">خدماتنا</h5>
                     <ul class="footer-links">
-                        <li><a href="land-shipping.html">الشحن البري</a></li>
-                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
-                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
-                        <li><a href="warehousing.html">التخزين</a></li>
+                        <li><a href="land-shipping.html" id="footerLandShippingLink">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html" id="footerSeaShippingLink">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html" id="footerAirShippingLink">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html" id="footerWarehousingLink">التخزين</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>معلومات التواصل</h5>
+                    <h5 id="contactInfoTitle">معلومات التواصل</h5>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
-                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
-                        <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
+                        <p><i class="fas fa-map-marker-alt auto-ma"></i><span id="addressText">الرياض، حي قرطبة، المملكة
+                                العربية السعودية</span></p>
+                        <p><i class="fas fa-phone auto-ma"></i><span id="phoneNumber" class="ltr-number">011 275
+                                8699</span></p>
+                        <p><i class="fas fa-envelope auto-ma"></i><span id="emailAddress">info@danlogistics.com</span>
+                        </p>
+                        <p><i class="fas fa-clock auto-ma"></i><span id="workingHours">السبت - الخميس: 8:00 -
+                                18:00</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -237,8 +262,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p>
-                        &copy; <span id="currentYear">2025</span> دعن للخدمات اللوجستية. جميع الحقوق محفوظة. |
-                        <span>صمم بواسطة <a href="https://aaplans.com/" class="designer-link">AAPlans</a></span>
+                        © <span id="currentYear">2025</span> <span id="copyrightText">دعن للخدمات اللوجستية. جميع الحقوق
+                            محفوظة.</span> |
+                        <span id="designedBy">صمم بواسطة</span> <a href="https://aaplans.com/"
+                            class="designer-link">AAPlans</a>
                     </p>
                 </div>
             </div>

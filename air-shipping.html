@@ -14,53 +14,59 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" dir="rtl">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-image-placeholder"></div>
                     <div class="logo-text">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                        <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
                     </div>
                 </div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">الرئيسية</a>
+                        <a id="homeNav" class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
+                            <span id="servicesNav">خدماتنا</span> <i class="fas fa-chevron-down ms-1"
+                                style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
-                            <li><a class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a class="dropdown-item active" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a class="dropdown-item" href="warehousing.html">التخزين</a></li>
+                            <li><a id="allServices" class="dropdown-item" href="services.html">جميع الخدمات</a></li>
+                            <li><a id="landShipping" class="dropdown-item" href="land-shipping.html">الشحن البري</a>
+                            </li>
+                            <li><a id="seaShipping" class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
+                            <li><a id="airShipping" class="dropdown-item active" href="air-shipping.html">الشحن
+                                    الجوي</a></li>
+                            <li><a id="warehousing" class="dropdown-item" href="warehousing.html">التخزين</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="track.html">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
+                    <div class="d-flex my-2 my-lg-0 justify-content-center">
+                        <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
-
     <section class="hero-section">
         <div class="hero-overlay bg-air-shipping"></div>
 
@@ -68,13 +74,14 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">الشحن الجوي</h1>
-                        <p class="hero-subtitle">
+                        <h1 class="hero-title" id="airShippingHeroTitle">الشحن الجوي</h1>
+                        <p class="hero-subtitle" id="airShippingHeroSubtitle">
                             حلول شحن جوي سريعة وفعالة لبضائعك العاجلة، تضمن وصولها إلى وجهتها في أسرع وقت ممكن وبأعلى
                             مستويات الأمان والجودة، مع تغطية عالمية واسعة.
                         </p>
                         <div class="hero-buttons">
-                            <a href="services.html" class="btn btn-primary btn-lg">استكشف خدماتنا</a>
+                            <a href="services.html" class="btn btn-primary btn-lg"
+                                id="airShippingExploreServicesButton">استكشف خدماتنا</a>
                         </div>
                     </div>
                 </div>
@@ -90,61 +97,72 @@
                         alt="Air Shipping">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="section-title text-start">خدمات الشحن الجوي السريع</h2>
-                    <p class="explain-service">عندما تكون السرعة هي الأولوية القصوى، توفر دعن للخدمات اللوجستية حلول شحن
+                    <h2 class="section-title text-start" id="airShippingDetailTitle">خدمات الشحن الجوي السريع</h2>
+                    <p class="explain-service" id="airShippingExplain1">عندما تكون السرعة هي الأولوية القصوى، توفر دعن
+                        للخدمات اللوجستية حلول شحن
                         جوي موثوقة وعالية الكفاءة. نحن نتعامل مع جميع أنواع الشحنات الجوية، من الطرود الصغيرة إلى
                         البضائع الكبيرة، مع ضمان وصولها في أسرع وقت ممكن وبأعلى معايير السلامة والأمان. ندرك أهمية الوقت
                         في عالم الأعمال، ولذلك نسعى لتقديم خدمة لا مثيل لها تلبي توقعاتك وتتجاوزها.</p>
-                    <p class="explain-service">نحن نعمل على تبسيط عملية الشحن الجوي لعملائنا، من خلال التعامل مع جميع
+                    <p class="explain-service" id="airShippingExplain2">نحن نعمل على تبسيط عملية الشحن الجوي لعملائنا،
+                        من خلال التعامل مع جميع
                         الإجراءات اللوجستية
                         والتخليص الجمركي، مما يتيح لك التركيز على أعمالك الأساسية بينما نتولى نحن مهمة نقل بضائعك بأمان
                         وسرعة إلى وجهتها النهائية حول العالم.</p>
                     <ul class="list-unstyled service-features mt-4">
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> أسرع طرق الشحن للبضائع الحساسة
+                        <li id="airShippingDetailFeature1"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            أسرع طرق الشحن للبضائع الحساسة
                             للوقت: نضمن توصيل شحناتك في أوقات قياسية، مما يجعلنا الخيار الأمثل للمواد العاجلة والضرورية
                             التي لا تحتمل التأخير.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> خدمات تتبع الشحنات في الوقت
+                        <li id="airShippingDetailFeature2"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            خدمات تتبع الشحنات في الوقت
                             الفعلي: نوفر لك أنظمة تتبع متقدمة تمكنك من مراقبة حالة شحنتك وموقعها بدقة متناهية، مما يضمن
                             لك الشفافية وراحة البال.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> حلول مخصصة للشحنات الخطرة
+                        <li id="airShippingDetailFeature3"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            حلول مخصصة للشحنات الخطرة
                             والقيمة: لدينا الخبرة والتراخيص اللازمة للتعامل مع الشحنات ذات الطبيعة الخاصة، بما في ذلك
                             المواد الخطرة والبضائع ذات القيمة العالية، مع تطبيق أعلى معايير السلامة الدولية.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> إجراءات جمركية مبسطة وسريعة: يقوم
+                        <li id="airShippingDetailFeature4"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            إجراءات جمركية مبسطة وسريعة: يقوم
                             فريقنا المتخصص بمعالجة جميع الإجراءات الجمركية بكفاءة وسرعة، لضمان مرور شحناتك بسلاسة عبر
                             الحدود وتجنب أي تأخيرات محتملة.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> خدمات التعبئة والتغليف المتخصصة:
+                        <li id="airShippingDetailFeature5"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            خدمات التعبئة والتغليف المتخصصة:
                             نقدم حلول تعبئة وتغليف مصممة خصيصًا للشحن الجوي، لضمان حماية بضائعك من التلف أثناء النقل
                             الجوي السريع.</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary mt-4">اطلب عرض سعر</a>
+                    <a href="contact.html" class="btn btn-primary mt-4" id="airShippingRequestQuoteButton">اطلب عرض
+                        سعر</a>
                 </div>
             </div>
 
             <div class="row mt-5">
                 <div class="col-12">
-                    <h3 class="text-center mb-4">مزايا الشحن الجوي مع دعن</h3>
+                    <h3 class="text-center mb-4" id="airShippingAdvantagesTitle">مزايا الشحن الجوي مع دعن</h3>
                     <div class="row text-center service-steps">
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-rocket fa-3x icon-custom-color mb-3"></i>
-                                <h5>1. سرعة فائقة</h5>
-                                <p>نحن نلتزم بتقديم توصيل سريع للغاية للشحنات العاجلة والحساسة للوقت، مما يضمن وصول
+                                <h5 id="airShippingFeatureCard1Title">1. سرعة فائقة</h5>
+                                <p id="airShippingFeatureCard1Text">نحن نلتزم بتقديم توصيل سريع للغاية للشحنات العاجلة
+                                    والحساسة للوقت، مما يضمن وصول
                                     بضائعك إلى وجهتها النهائية في أقصر فترة زمنية ممكنة.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-lock fa-3x icon-custom-color mb-3"></i>
-                                <h5>2. أمان عالي</h5>
-                                <p>نطبق إجراءات أمنية مشددة وبروتوكولات سلامة عالمية لحماية بضائعك الثمينة والحساسة خلال
+                                <h5 id="airShippingFeatureCard2Title">2. أمان عالي</h5>
+                                <p id="airShippingFeatureCard2Text">نطبق إجراءات أمنية مشددة وبروتوكولات سلامة عالمية
+                                    لحماية بضائعك الثمينة والحساسة خلال
                                     جميع مراحل الرحلة الجوية، من الاستلام وحتى التسليم.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-handshake fa-3x icon-custom-color mb-3"></i>
-                                <h5>3. مرونة ودعم</h5>
-                                <p>نقدم حلولًا لوجستية مرنة تتكيف مع احتياجاتك المتغيرة، بالإضافة إلى دعم عملاء متاح على
+                                <h5 id="airShippingFeatureCard3Title">3. مرونة ودعم</h5>
+                                <p id="airShippingFeatureCard3Text">نقدم حلولًا لوجستية مرنة تتكيف مع احتياجاتك
+                                    المتغيرة، بالإضافة إلى دعم عملاء متاح على
                                     مدار الساعة للإجابة على استفساراتك وتقديم المساعدة في أي وقت.</p>
                             </div>
                         </div>
@@ -158,38 +176,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">هل لديك شحنة عاجلة تحتاج إلى شحن جوي سريع وموثوق؟</h2>
-                    <p class="text-white mb-4">تواصل معنا الآن للحصول على أفضل حلول الشحن الجوي المصممة خصيصًا لتلبية
+                    <h2 class="text-white mb-4" id="airShippingCtaTitle">هل لديك شحنة عاجلة تحتاج إلى شحن جوي سريع
+                        وموثوق؟</h2>
+                    <p class="text-white mb-4" id="airShippingCtaSubtitle">تواصل معنا الآن للحصول على أفضل حلول الشحن
+                        الجوي المصممة خصيصًا لتلبية
                         متطلباتك وضمان وصول بضائعك بأمان.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">احصل على استشارة</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg" id="airShippingCtaButton">احصل على
+                            استشارة</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section bg-dark text-light py-5 ">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <a class="navbar-brand" href="index.html">
-                                <div class="logo-container">
-                                    <img src="img\logo.png" alt="logo">
-                                    <div class="logo-text text-center text-lg-end">
-                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="logo-container  d-flex justify-content-center mb-2">
+                            <div class="logo-image-placeholder"></div>
+                            <div class="logo-text">
+                                <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
+                            </div>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
-                            الجودة في الشحن والنقل
+                        <p class="text-center text-lg-center" id="footerDescription">شريكك الموثوق في الحلول اللوجستية
+                            المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل
                             والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
                             بضائعك إلى وجهتها بأمان وكفاءة.</p>
-                        <div class="social-links d-flex justify-content-center justify-content-lg-start">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-center">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -199,32 +216,38 @@
                 </div>
 
                 <div class="col-lg-2 text-center">
-                    <h5>الروابط السريعة</h5>
+                    <h5 id="quickLinksTitle">الروابط السريعة</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="index.html" id="footerHomeLink">الرئيسية</a></li>
+                        <li><a href="about.html" id="footerAboutLink">من نحن</a></li>
+                        <li><a href="services.html" id="footerServicesLink">خدماتنا</a></li>
+                        <li><a href="track.html" id="footerTrackLink">تتبع الطلب</a></li>
+                        <li><a href="contact.html" id="footerContactLink">اتصل بنا</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>خدماتنا</h5>
+                    <h5 id="servicesTitle">خدماتنا</h5>
                     <ul class="footer-links">
-                        <li><a href="land-shipping.html">الشحن البري</a></li>
-                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
-                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
-                        <li><a href="warehousing.html">التخزين</a></li>
+                        <li><a href="land-shipping.html" id="footerLandShippingLink">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html" id="footerSeaShippingLink">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html" id="footerAirShippingLink">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html" id="footerWarehousingLink">التخزين</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>معلومات التواصل</h5>
+                    <h5 id="contactInfoTitle">معلومات التواصل</h5>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
-                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
-                        <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
+                        <p><i class="fas fa-map-marker-alt auto-ma"></i><span id="addressText">الرياض، حي قرطبة، المملكة
+                                العربية السعودية</span></p>
+                        <p><i class="fas fa-phone auto-ma"></i><span id="phoneNumber" class="ltr-number">011 275
+                                8699</span></p>
+                        <p><i class="fas fa-envelope auto-ma"></i><span id="emailAddress">info@danlogistics.com</span>
+                        </p>
+                        <p><i class="fas fa-clock auto-ma"></i><span id="workingHours">السبت - الخميس: 8:00 -
+                                18:00</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -234,8 +257,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p>
-                        &copy; <span id="currentYear">2025</span> دعن للخدمات اللوجستية. جميع الحقوق محفوظة. |
-                        <span>صمم بواسطة <a href="https://aaplans.com/" class="designer-link">AAPlans</a></span>
+                        © <span id="currentYear">2025</span> <span id="copyrightText">دعن للخدمات اللوجستية. جميع الحقوق
+                            محفوظة.</span> |
+                        <span id="designedBy">صمم بواسطة</span> <a href="https://aaplans.com/"
+                            class="designer-link">AAPlans</a>
                     </p>
                 </div>
             </div>

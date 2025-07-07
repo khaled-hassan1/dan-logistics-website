@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعن للخدمات اللوجستية - الرئيسية</title>
+    <title id="pageTitle">دعن للخدمات اللوجستية - الرئيسية</title>
     <!-- RLT -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <!-- LTR -->
@@ -18,13 +18,15 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container-fluid"> <a class="navbar-brand" href="index.html">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img\logo.png" alt="logo">
-                    <div class="logo-text ">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                    <div class="logo-image-placeholder"></div>
+                    <div class="logo-text">
+                        <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
                     </div>
                 </div>
             </a>
@@ -35,13 +37,14 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a id="homeNav" class="nav-link active" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="servicesNav" class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                            <span id="servicesNav">خدماتنا</span> <i class="fas fa-chevron-down ms-1"
+                                style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a id="allServices" class="dropdown-item" href="services.html">جميع الخدمات</a></li>
@@ -61,85 +64,28 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
+                    <div class="d-flex my-2 my-lg-0 justify-content-center">
+                        <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
+                    </div>
                 </ul>
-
-                <!-- <a href="index.html" id="languageButton" class="btn btn-primary py-2 px-4 my-3 my-lg-0">
-                    عربي
-                </a> -->
-                <div class="d-flex my-2 my-lg-0">
-                    <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">
-                        EN </a>
-                </div>
             </div>
         </div>
     </nav>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <div class="logo-container">
-                    <img src="img\logo.png" alt="logo">
-                    <div class="logo-text ">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                    </div>
-                </div>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a id="homeNav" class="nav-link active" href="index.html">الرئيسية</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a id="servicesNav" class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a id="allServices" class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a id="landShipping" class="dropdown-item" href="land-shipping.html">الشحن البري</a>
-                            </li>
-                            <li><a id="seaShipping" class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a id="airShipping" class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a id="warehousing" class="dropdown-item" href="warehousing.html">التخزين</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
-                    </li>
-                </ul>
-
-                <a href="index.html" id="languageButton" class="btn btn-primary py-2 px-4 my-3 my-lg-0">
-                    عربي
-                </a>
-
-            </div>
-        </div>
-    </nav> -->
 
     <section class="hero-section">
         <div class="hero-overlay bg-home"></div>
-
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">شريكك الموثوق في الحلول اللوجستية</h1>
-                        <p class="hero-subtitle">
+                        <h1 class="hero-title" id="heroTitle">شريكك الموثوق في الحلول اللوجستية</h1>
+                        <p class="hero-subtitle" id="heroSubtitle">
                             نقدم خدمات لوجستية متكاملة تشمل الشحن البري والبحري والجوي، التخزين، والخدمات الجمركية
                             بأعلى معايير الجودة والسرعة في جميع أنحاء المملكة ودول الخليج
                         </p>
                         <div class="hero-buttons">
-                            <a href="services.html" class="btn btn-primary btn-lg">استكشف خدماتنا</a>
+                            <a href="services.html" class="btn btn-primary btn-lg" id="exploreServicesBtn">استكشف
+                                خدماتنا</a>
                         </div>
                     </div>
                 </div>
@@ -147,36 +93,36 @@
         </div>
     </section>
 
-
-    <!-- Tracking Results Section -->
     <section class="order-tracking-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="card shadow-sm tracking-card">
                         <div class="btn-primary text-white text-center" style="padding: 10px;border-radius: 0;">
-                            <h3 class="mb-0">تتبع حالة شحنتك</h3>
+                            <h3 class="mb-0" id="trackingTitle">تتبع حالة شحنتك</h3>
                         </div>
                         <div class="card-body">
                             <form id="trackingForm">
                                 <div class="mb-4">
-                                    <label for="referenceNumber" class="form-label">رقم المرجع (الرفرنس)</label>
-                                    <div class="input-group flex items-center gap-2"> <input type="text"
-                                            class="form-control flex-grow" id="referenceNumber"
-                                            placeholder="أدخل رقم المرجع المكون من 10 أرقام" required> <button
-                                            class="btn btn-primary" type="submit">
+                                    <label for="referenceNumber" class="form-label" id="referenceLabel">رقم المرجع
+                                        (الرفرنس)</label>
+                                    <div class="input-group flex items-center gap-2">
+                                        <input type="text" class="form-control flex-grow" id="referenceNumber"
+                                            data-i18n-placeholder="referencePlaceholder"
+                                            placeholder="أدخل رقم المرجع المكون من 10 أرقام" required>
+
+                                        <button class="btn btn-primary" type="submit" id="trackBtn">
                                             <i class="fas fa-search me-2"></i> تتبع
                                         </button>
                                     </div>
-
-                                    <small class="text-muted">يمكنك العثور على رقم المرجع في إيصال الشحن أو البريد
-                                        الإلكتروني الخاص بك</small>
+                                    <small class="text-muted" id="trackingHelp">يمكنك العثور على رقم المرجع في إيصال
+                                        الشحن أو البريد الإلكتروني الخاص بك</small>
                                 </div>
                             </form>
 
                             <div id="trackingResult" class="d-none">
-                                <h4 class="text-center mb-4">حالة الشحنة: <span id="orderStatus"
-                                        class="badge bg-success">في الطريق</span></h4>
+                                <h4 class="text-center mb-4" id="shipmentStatusTitle">حالة الشحنة: <span
+                                        id="statusInTransit" class="badge bg-success">في الطريق</span></h4>
 
                                 <div class="timeline">
                                     <div class="timeline-step completed">
@@ -184,9 +130,9 @@
                                             <i class="fas fa-check"></i>
                                         </div>
                                         <div class="timeline-content">
-                                            <h6>تم استلام الطلب</h6>
-                                            <p class="text-muted">12 يوليو 2025 - 10:30 ص</p>
-                                            <p>تم استلام الشحنة في مستودع الرياض</p>
+                                            <h6 id="orderReceived">تم استلام الطلب</h6>
+                                            <p class="text-muted" id="orderReceivedDate">12 يوليو 2025 - 10:30 ص</p>
+                                            <p id="orderReceivedDesc">تم استلام الشحنة في مستودع الرياض</p>
                                         </div>
                                     </div>
 
@@ -195,9 +141,9 @@
                                             <i class="fas fa-check"></i>
                                         </div>
                                         <div class="timeline-content">
-                                            <h6>معالجة الطلب</h6>
-                                            <p class="text-muted">12 يوليو 2025 - 2:15 م</p>
-                                            <p>تم تجهيز الشحنة للشحن</p>
+                                            <h6 id="orderProcessing">معالجة الطلب</h6>
+                                            <p class="text-muted" id="orderProcessingDate">12 يوليو 2025 - 2:15 م</p>
+                                            <p id="orderProcessingDesc">تم تجهيز الشحنة للشحن</p>
                                         </div>
                                     </div>
 
@@ -205,10 +151,11 @@
                                         <div class="timeline-icon">
                                             <i class="fas fa-truck"></i>
                                         </div>
+                                        PLEASE
                                         <div class="timeline-content">
-                                            <h6>في الطريق</h6>
-                                            <p class="text-muted">13 يوليو 2025 - 9:00 ص</p>
-                                            <p>الشحنة في طريقها إلى وجهتها النهائية</p>
+                                            <h6 id="inTransit">في الطريق</h6>
+                                            <p class="text-muted" id="inTransitDate">13 يوليو 2025 - 9:00 ص</p>
+                                            <p id="inTransitDesc">الشحنة في طريقها إلى وجهتها النهائية</p>
                                         </div>
                                     </div>
 
@@ -217,29 +164,34 @@
                                             <i class="fas fa-home"></i>
                                         </div>
                                         <div class="timeline-content">
-                                            <h6>تسليم</h6>
-                                            <p class="text-muted">متوقع: 14 يوليو 2025</p>
-                                            <p>سيتم تسليم الشحنة خلال يوم العمل</p>
+                                            <h6 id="delivered">تسليم</h6>
+                                            <p class="text-muted" id="deliveredDate">متوقع: 14 يوليو 2025</p>
+                                            <p id="deliveredDesc">سيتم تسليم الشحنة خلال يوم العمل</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="order-details mt-5">
-                                    <h5 class="mb-4 text-center">تفاصيل الشحنة</h5>
+                                    <h5 class="mb-4 text-center" id="orderDetailsTitle">تفاصيل الشحنة</h5>
                                     <div class="row">
                                         <div class="col-md-6 mb-3 mb-md-0">
                                             <div class="p-3 bg-light rounded">
-                                                <p><strong>رقم المرجع:</strong> <span
+                                                <p><strong id="refNumberLabel">رقم المرجع:</strong> <span
                                                         id="detailRefNumber">DAN-78945612</span></p>
-                                                <p><strong>تاريخ الشحن:</strong> 12 يوليو 2025</p>
-                                                <p><strong>الوزن:</strong> 25 كجم</p>
+                                                <p><strong id="shipDateLabel">تاريخ الشحن:</strong> <span
+                                                        id="shipDateValue">12 يوليو 2025</span></p>
+                                                <p><strong id="weightLabel">الوزن:</strong> <span id="weightValue">25
+                                                        كجم</span></p>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="p-3 bg-light rounded">
-                                                <p><strong>من:</strong> الرياض، المملكة العربية السعودية</p>
-                                                <p><strong>إلى:</strong> جدة، المملكة العربية السعودية</p>
-                                                <p><strong>نوع الخدمة:</strong> الشحن البري السريع</p>
+                                                <p><strong id="fromLabel">من:</strong> <span id="fromValue">الرياض،
+                                                        المملكة العربية السعودية</span></p>
+                                                <p><strong id="toLabel">إلى:</strong> <span id="toValue">جدة، المملكة
+                                                        العربية السعودية</span></p>
+                                                <p><strong id="serviceTypeLabel">نوع الخدمة:</strong> <span
+                                                        id="serviceTypeValue">الشحن البري السريع</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -263,9 +215,9 @@
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
                     <div class="content-section">
-                        <h2 class="section-title text-start">شركة دعن للخدمات اللوجستية</h2>
-                        <p class="lead">رائدة في مجال الحلول اللوجستية المتكاملة</p>
-                        <p class="sub-lead">
+                        <h2 class="section-title text-start" id="aboutTitle">شركة دعن للخدمات اللوجستية</h2>
+                        <p class="lead" id="aboutLead">رائدة في مجال الحلول اللوجستية المتكاملة</p>
+                        <p class="sub-lead" id="aboutPara1">
                             تأسست شركة دعن للخدمات اللوجستية عام 2024م كشركة رائدة في مجال النقل والشحن واللوجستيات
                             في المملكة العربية السعودية. منذ تأسيسنا، ونحن نعمل جاهدين على بناء سمعة قوية كشريك لوجستي
                             موثوق به، من خلال تقديم خدمات شاملة تلبي تطلعات عملائنا. نحن نفخر بتقديم خدمات لوجستية
@@ -273,7 +225,7 @@
                             من الشركات الصغيرة والمتوسطة إلى الشركات الكبرى والمؤسسات الحكومية. نحن نؤمن بأن كل شحنة
                             تحمل قصة نجاح، ونسعى لتحقيق هذه النجاحات من خلال حلولنا المبتكرة والفعالة.
                         </p>
-                        <p class="sub-lead">
+                        <p class="sub-lead" id="aboutPara2">
                             نحن ملتزمون بتقديم أحدث وأفضل الحلول اللوجستية التي تضمن وصول البضائع في الوقت المحدد
                             وبأعلى معايير الأمان والجودة، مستندين إلى رؤية طموحة وفريق عمل ذو كفاءة عالية. فريقنا يضم
                             نخبة من الخبراء في جميع مجالات اللوجستيات، من التخطيط الاستراتيجي إلى التنفيذ الدقيق، مما
@@ -300,8 +252,9 @@
                         <div class="vision-icon">
                             <i class="fas fa-eye"></i>
                         </div>
-                        <h3>رؤيتنا</h3>
-                        <p>أن نكون الشركة الرائدة في مجال الخدمات اللوجستية في المنطقة، ونساهم في تطوير قطاع النقل
+                        <h3 id="visionTitle">رؤيتنا</h3>
+                        <p id="visionText">أن نكون الشركة الرائدة في مجال الخدمات اللوجستية في المنطقة، ونساهم في تطوير
+                            قطاع النقل
                             والشحن من خلال تقديم حلول مبتكرة وموثوقة. نتطلع إلى بناء مستقبل لوجستي مستدام يعتمد على
                             التقنيات الحديثة والممارسات الصديقة للبيئة، لتكون دعن للخدمات اللوجستية نموذجًا يحتذى به في
                             الكفاءة والابتكار.</p>
@@ -313,8 +266,9 @@
                         <div class="vision-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>مهمتنا</h3>
-                        <p>تقديم خدمات لوجستية عالية الجودة تلبي احتياجات عملائنا وتتجاوز توقعاتهم، مع الالتزام بأعلى
+                        <h3 id="missionTitle">مهمتنا</h3>
+                        <p id="missionText">تقديم خدمات لوجستية عالية الجودة تلبي احتياجات عملائنا وتتجاوز توقعاتهم، مع
+                            الالتزام بأعلى
                             معايير الأمان والسرعة والكفاءة. نحن نعمل جاهدين على فهم متطلبات كل عميل وتقديم حلول مخصصة
                             تضمن تحقيق أهدافهم التجارية، مع الحفاظ على التميز التشغيلي في جميع مراحل سلسلة التوريد.</p>
                     </div>
@@ -325,8 +279,9 @@
                         <div class="vision-icon">
                             <i class="fas fa-gem"></i>
                         </div>
-                        <h3>قيمنا</h3>
-                        <p>الثقة، الجودة، الابتكار، والالتزام. نؤمن بأهمية بناء علاقات طويلة الأمد مع عملائنا وشركائنا
+                        <h3 id="valuesTitle">قيمنا</h3>
+                        <p id="valuesText">الثقة، الجودة، الابتكار، والالتزام. نؤمن بأهمية بناء علاقات طويلة الأمد مع
+                            عملائنا وشركائنا
                             القائمة على الثقة المتبادلة. نحن نتبنى الشفافية في جميع تعاملاتنا، ونلتزم بالمسؤولية
                             الاجتماعية، ونسعى دائمًا للتحسين المستمر والتعلم لتقديم أفضل ما لدينا.</p>
                     </div>
@@ -335,13 +290,13 @@
         </div>
     </section>
 
-
     <section class="services-overview py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">حلول لوجستية شاملة</h2>
-                    <p class="section-subtitle">نقدم مجموعة متكاملة من الخدمات اللوجستية التي تلبي جميع احتياجاتك</p>
+                    <h2 class="section-title" id="servicesOverviewTitle">حلول لوجستية شاملة</h2>
+                    <p class="section-subtitle" id="servicesOverviewSubtitle">نقدم مجموعة متكاملة من الخدمات اللوجستية
+                        التي تلبي جميع احتياجاتك</p>
                 </div>
             </div>
 
@@ -356,17 +311,19 @@
                             <div class="service-icon">
                                 <i class="fas fa-truck"></i>
                             </div>
-                            <h4 class="text-center">الشحن البري</h4>
-                            <p class="text-center">خدمات الشحن البري السريعة والآمنة لجميع أنحاء المملكة ودول الخليج مع
-                                ضمان الوصول في الوقت
-                                المحدد.</p>
+                            <h4 class="text-center" id="landShippingTitle">الشحن البري</h4>
+                            <p class="text-center" id="landShippingDesc">خدمات الشحن البري السريعة والآمنة لجميع أنحاء
+                                المملكة ودول الخليج مع ضمان الوصول في الوقت المحدد.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تتبع الشحنات على مدار الساعة</li>
-                                <li><i class="fas fa-check"></i> أسطول حديث ومجهز</li>
-                                <li><i class="fas fa-check"></i> تأمين شامل على البضائع</li>
+                                <li><i class="fas fa-check"></i><span id="landFeature1"> تتبع الشحنات على مدار
+                                        الساعة</span></li>
+                                <li><i class="fas fa-check"></i><span id="landFeature2"> أسطول حديث ومجهز</span></li>
+                                <li><i class="fas fa-check"></i><span id="landFeature3"> تأمين شامل على البضائع</span>
+                                </li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="land-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="land-shipping.html" class="btn btn-primary" id="landLearnMore">اعرف المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -381,17 +338,19 @@
                             <div class="service-icon">
                                 <i class="fas fa-ship"></i>
                             </div>
-                            <h4 class="text-center">الشحن البحري</h4>
-                            <p class="text-center">حلول الشحن البحري الاقتصادية للبضائع الثقيلة والشحنات الكبيرة مع شبكة
-                                واسعة من الموانئ
-                                العالمية.</p>
+                            <h4 class="text-center" id="seaShippingTitle">الشحن البحري</h4>
+                            <p class="text-center" id="seaShippingDesc">حلول الشحن البحري الاقتصادية للبضائع الثقيلة
+                                والشحنات الكبيرة مع شبكة واسعة من الموانئ العالمية.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> شحن الحاويات الكاملة والجزئية</li>
-                                <li><i class="fas fa-check"></i> خدمات التخليص الجمركي</li>
-                                <li><i class="fas fa-check"></i> تغطية عالمية واسعة</li>
+                                <li><i class="fas fa-check"></i><span id="seaFeature1"> شحن الحاويات الكاملة
+                                        والجزئية</span></li>
+                                <li><i class="fas fa-check"></i><span id="seaFeature2"> خدمات التخليص الجمركي</span>
+                                </li>
+                                <li><i class="fas fa-check"></i><span id="seaFeature3"> تغطية عالمية واسعة</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="sea-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="sea-shipping.html" class="btn btn-primary" id="seaLearnMore">اعرف المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -406,16 +365,19 @@
                             <div class="service-icon">
                                 <i class="fas fa-plane"></i>
                             </div>
-                            <h4 class="text-center">الشحن الجوي</h4>
-                            <p class="text-center">خدمات الشحن الجوي السريع للبضائع العاجلة والمواد الحساسة مع ضمان
-                                السرعة والأمان.</p>
+                            <h4 class="text-center" id="airShippingTitle">الشحن الجوي</h4>
+                            <p class="text-center" id="airShippingDesc">خدمات الشحن الجوي السريع للبضائع العاجلة والمواد
+                                الحساسة مع ضمان السرعة والأمان.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تسليم سريع خلال 24-48 ساعة</li>
-                                <li><i class="fas fa-check"></i> مناولة خاصة للبضائع الحساسة</li>
-                                <li><i class="fas fa-check"></i> شبكة مطارات عالمية</li>
+                                <li><i class="fas fa-check"></i><span id="airFeature1"> تسليم سريع خلال 24-48
+                                        ساعة</span></li>
+                                <li><i class="fas fa-check"></i><span id="airFeature2"> مناولة خاصة للبضائع
+                                        الحساسة</span></li>
+                                <li><i class="fas fa-check"></i><span id="airFeature3"> شبكة مطارات عالمية</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="air-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="air-shipping.html" class="btn btn-primary" id="airLearnMore">اعرف المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -429,16 +391,21 @@
                             <div class="service-icon">
                                 <i class="fas fa-warehouse"></i>
                             </div>
-                            <h4 class="text-center">التخزين</h4>
-                            <p class="text-center">مرافق تخزين آمنة ومجهزة بأحدث التقنيات لحفظ البضائع مع أنظمة إدارة
-                                المخزون المتطورة.</p>
+                            <h4 class="text-center" id="warehousingTitle">التخزين</h4>
+                            <p class="text-center" id="warehousingDesc">مرافق تخزين آمنة ومجهزة بأحدث التقنيات لحفظ
+                                البضائع مع أنظمة إدارة المخزون المتطورة.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> مساحات تخزين مرنة</li>
-                                <li><i class="fas fa-check"></i> أنظمة أمان متقدمة</li>
-                                <li><i class="fas fa-check"></i> إدارة المخزون الإلكترونية</li>
+                                <li><i class="fas fa-check"></i><span id="warehouseFeature1"> مساحات تخزين مرنة</span>
+                                </li>
+                                <li><i class="fas fa-check"></i><span id="warehouseFeature2"> أنظمة أمان متقدمة</span>
+                                </li>
+                                <li><i class="fas fa-check"></i><span id="warehouseFeature3"> إدارة المخزون
+                                        الإلكترونية</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="warehousing.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="warehousing.html" class="btn btn-primary" id="warehouseLearnMore">اعرف
+                                    المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -453,16 +420,19 @@
                             <div class="service-icon">
                                 <i class="fas fa-box"></i>
                             </div>
-                            <h4 class="text-center">التعبئة والتغليف</h4>
-                            <p class="text-center">خدمات التعبئة والتغليف المتخصصة لحماية البضائع أثناء النقل مع استخدام
-                                أفضل المواد.</p>
+                            <h4 class="text-center" id="packagingTitle">التعبئة والتغليف</h4>
+                            <p class="text-center" id="packagingDesc">خدمات التعبئة والتغليف المتخصصة لحماية البضائع
+                                أثناء النقل مع استخدام أفضل المواد.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> مواد تغليف عالية الجودة</li>
-                                <li><i class="fas fa-check"></i> تغليف مخصص حسب نوع البضاعة</li>
-                                <li><i class="fas fa-check"></i> ضمان الحماية الكاملة</li>
+                                <li><i class="fas fa-check"></i><span id="packagingFeature1"> مواد تغليف عالية
+                                        الجودة</span></li>
+                                <li><i class="fas fa-check"></i><span id="packagingFeature2"> تغليف مخصص حسب نوع
+                                        البضاعة</span></li>
+                                <li><i class="fas fa-check"></i><span id="packagingFeature3"> ضمان الحماية
+                                        الكاملة</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="contact.html"
-                                    class="btn btn-primary">اطلب الخدمة</a>
+                            <div class="d-flex justify-content-center">
+                                <a href="contact.html" class="btn btn-primary" id="packagingRequest">اطلب الخدمة</a>
                             </div>
                         </div>
                     </div>
@@ -478,16 +448,19 @@
                             <div class="service-icon">
                                 <i class="fas fa-clipboard-check"></i>
                             </div>
-                            <h4 class="text-center">الخدمات الجمركية</h4>
-                            <p class="text-center">إنجاز المعاملات الجمركية والتخليص الجمركي بسرعة ودقة مع فريق من
-                                الخبراء المتخصصين.</p>
+                            <h4 class="text-center" id="customsTitle">الخدمات الجمركية</h4>
+                            <p class="text-center" id="customsDesc">إنجاز المعاملات الجمركية والتخليص الجمركي بسرعة ودقة
+                                مع فريق من الخبراء المتخصصين.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تخليص جمركي سريع</li>
-                                <li><i class="fas fa-check"></i> استشارات جمركية متخصصة</li>
-                                <li><i class="fas fa-check"></i> متابعة المعاملات الحكومية</li>
+                                <li><i class="fas fa-check"></i><span id="customsFeature1"> تخليص جمركي سريع</span></li>
+                                <li><i class="fas fa-check"></i><span id="customsFeature2"> استشارات جمركية
+                                        متخصصة</span></li>
+                                <li><i class="fas fa-check"></i><span id="customsFeature3"> متابعة المعاملات
+                                        الحكومية</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="contact.html"
-                                    class="btn btn-primary">اطلب الخدمة</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="contact.html" class="btn btn-primary" id="customsRequest">اطلب الخدمة</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -499,8 +472,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">لماذا تختار خدماتنا؟</h2>
-                    <p class="section-subtitle">مميزات تجعلنا الخيار الأفضل لاحتياجاتك اللوجستية</p>
+                    <h2 class="section-title" id="whyChooseTitle">لماذا تختار خدماتنا؟</h2>
+                    <p class="section-subtitle" id="whyChooseSubtitle">مميزات تجعلنا الخيار الأفضل لاحتياجاتك اللوجستية
+                    </p>
                 </div>
             </div>
 
@@ -510,8 +484,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h5>التسليم في الوقت المحدد</h5>
-                        <p>نضمن وصول شحناتك في المواعيد المحددة بدقة 99%</p>
+                        <h5 id="onTimeTitle">التسليم في الوقت المحدد</h5>
+                        <p id="onTimeDesc">نضمن وصول شحناتك في المواعيد المحددة بدقة 99%</p>
                     </div>
                 </div>
 
@@ -520,8 +494,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h5>أمان وحماية</h5>
-                        <p>أعلى مستويات الأمان والتأمين الشامل على جميع الشحنات</p>
+                        <h5 id="securityTitle">أمان وحماية</h5>
+                        <p id="securityDesc">أعلى مستويات الأمان والتأمين الشامل على جميع الشحنات</p>
                     </div>
                 </div>
 
@@ -530,8 +504,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-dollar-sign"></i>
                         </div>
-                        <h5>أسعار تنافسية</h5>
-                        <p>أفضل الأسعار في السوق مع جودة عالية في الخدمة</p>
+                        <h5 id="pricingTitle">أسعار تنافسية</h5>
+                        <p id="pricingDesc">أفضل الأسعار في السوق مع جودة عالية في الخدمة</p>
                     </div>
                 </div>
 
@@ -540,8 +514,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <h5>دعم 24/7</h5>
-                        <p>فريق خدمة العملاء متاح على مدار الساعة لمساعدتك</p>
+                        <h5 id="supportTitle">دعم 24/7</h5>
+                        <p id="supportDesc">فريق خدمة العملاء متاح على مدار الساعة لمساعدتك</p>
                     </div>
                 </div>
             </div>
@@ -552,8 +526,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">إنجازاتنا</h2>
-                    <p class="section-subtitle">أرقام تتحدث عن نجاحنا</p>
+                    <h2 class="section-title" id="achievementsTitle">إنجازاتنا</h2>
+                    <p class="section-subtitle" id="achievementsSubtitle">أرقام تتحدث عن نجاحنا</p>
                 </div>
             </div>
 
@@ -564,7 +538,7 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="achievement-number">500+</h3>
-                        <p>عميل راضي</p>
+                        <p id="satisfiedCustomers">عميل راضي</p>
                     </div>
                 </div>
 
@@ -574,7 +548,7 @@
                             <i class="fas fa-box"></i>
                         </div>
                         <h3 class="achievement-number">12000+</h3>
-                        <p>شحنة سنوياً</p>
+                        <p id="annualShipments">شحنة سنوياً</p>
                     </div>
                 </div>
 
@@ -584,7 +558,7 @@
                             <i class="fas fa-globe"></i>
                         </div>
                         <h3 class="achievement-number">50+</h3>
-                        <p>دولة حول العالم</p>
+                        <p id="countriesServed">دولة حول العالم</p>
                     </div>
                 </div>
 
@@ -594,7 +568,7 @@
                             <i class="fas fa-calendar"></i>
                         </div>
                         <h3 class="achievement-number">2+</h3>
-                        <p>سنة خبرة</p>
+                        <p id="yearsExperience">سنة خبرة</p>
                     </div>
                 </div>
             </div>
@@ -605,37 +579,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">هل تحتاج إلى خدمات لوجستية موثوقة؟</h2>
-                    <p class="text-white mb-4">تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مخصص</p>
+                    <h2 class="text-white mb-4" id="ctaTitle">هل تحتاج إلى خدمات لوجستية موثوقة؟</h2>
+                    <p class="text-white mb-4" id="ctaSubtitle">تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مخصص
+                    </p>
                     <div class="cta-buttons">
-                        <a href="tel:0112758699" class="btn btn-outline-light btn-lg">اتصل بنا الآن</a>
+                        <a href="tel:0112758699" class="btn btn-outline-light btn-lg" id="callNowBtn">اتصل بنا الآن</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section bg-dark text-light py-5 ">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <a class="navbar-brand" href="index.html">
-                                <div class="logo-container">
-                                    <img src="img\logo.png" alt="logo">
-                                    <div class="logo-text text-center text-lg-end">
-                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="logo-container  d-flex justify-content-center mb-2">
+                            <div class="logo-image-placeholder"></div>
+                            <div class="logo-text">
+                                <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
+                            </div>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
-                            الجودة في الشحن والنقل
+                        <p class="text-center text-lg-center" id="footerDescription">شريكك الموثوق في الحلول اللوجستية
+                            المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل
                             والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
                             بضائعك إلى وجهتها بأمان وكفاءة.</p>
-                        <div class="social-links d-flex justify-content-center justify-content-lg-start">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-center">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -645,33 +616,38 @@
                 </div>
 
                 <div class="col-lg-2 text-center">
-                    <h5>الروابط السريعة</h5>
+                    <h5 id="quickLinksTitle">الروابط السريعة</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="track.html">تتبع الطلب</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="index.html" id="footerHomeLink">الرئيسية</a></li>
+                        <li><a href="about.html" id="footerAboutLink">من نحن</a></li>
+                        <li><a href="services.html" id="footerServicesLink">خدماتنا</a></li>
+                        <li><a href="track.html" id="footerTrackLink">تتبع الطلب</a></li>
+                        <li><a href="contact.html" id="footerContactLink">اتصل بنا</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>خدماتنا</h5>
+                    <h5 id="servicesTitle">خدماتنا</h5>
                     <ul class="footer-links">
-                        <li><a href="land-shipping.html">الشحن البري</a></li>
-                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
-                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
-                        <li><a href="warehousing.html">التخزين</a></li>
+                        <li><a href="land-shipping.html" id="footerLandShippingLink">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html" id="footerSeaShippingLink">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html" id="footerAirShippingLink">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html" id="footerWarehousingLink">التخزين</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>معلومات التواصل</h5>
+                    <h5 id="contactInfoTitle">معلومات التواصل</h5>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
-                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
-                        <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
+                        <p><i class="fas fa-map-marker-alt auto-ma"></i><span id="addressText">الرياض، حي قرطبة، المملكة
+                                العربية السعودية</span></p>
+                        <p><i class="fas fa-phone auto-ma"></i><span id="phoneNumber" class="ltr-number">011 275
+                                8699</span></p>
+                        <p><i class="fas fa-envelope auto-ma"></i><span id="emailAddress">info@danlogistics.com</span>
+                        </p>
+                        <p><i class="fas fa-clock auto-ma"></i><span id="workingHours">السبت - الخميس: 8:00 -
+                                18:00</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -681,18 +657,18 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p>
-                        &copy; <span id="currentYear">2025</span> دعن للخدمات اللوجستية. جميع الحقوق محفوظة. |
-                        <span>صمم بواسطة <a href="https://aaplans.com/" class="designer-link">AAPlans</a></span>
+                        © <span id="currentYear">2025</span> <span id="copyrightText">دعن للخدمات اللوجستية. جميع الحقوق
+                            محفوظة.</span> |
+                        <span id="designedBy">صمم بواسطة</span> <a href="https://aaplans.com/"
+                            class="designer-link">AAPlans</a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-
 
 </body>
 

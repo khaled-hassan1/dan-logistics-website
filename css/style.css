@@ -55,11 +55,7 @@ html {
     /* Align items to the start (left for LTR, right for RTL) */
 }
 
-/* Optional: Adjust margins between the spans if needed */
-.brand-ar {
-    margin-bottom: 0px;
-    /* Adjust this value as desired */
-}
+
 
 .logo-container {
     display: flex;
@@ -67,10 +63,48 @@ html {
     gap: 0.2rem;
 }
 
-.logo-container img {
+/* Default logo (e.g., Arabic logo) */
+.logo-container .logo-image-placeholder {
     background-color: transparent;
     width: 50px;
     height: 50px;
+    background-image: url(../img/logo.png);
+    /* Default logo */
+    background-size: contain;
+    /* Ensure the image fits within the div */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* For English language */
+/* Assuming the 'lang' attribute is on the <html> tag */
+html[lang="en"] .logo-container .logo-image-placeholder {
+    background-image: url(../img/logo-en.png);
+    /* English logo */
+}
+
+/* You might also want to explicitly hide the Arabic brand text and show the English brand text */
+html[lang="ar"] .logo-text .brand-ar {
+    display: block;
+}
+
+html[lang="ar"] .logo-text .brand-en {
+    display: none;
+}
+
+html[lang="en"] .logo-text .brand-ar {
+    display: none;
+}
+
+html[lang="en"] .logo-text .brand-en {
+    display: block;
+}
+
+/* Set a default for both for safety */
+.logo-text .brand-ar,
+.logo-text .brand-en {
+    display: none;
+    /* Hide both by default */
 }
 
 .navbar-brand {
@@ -81,6 +115,15 @@ html {
     color: var(--bs-navbar-brand-color);
     text-decoration: none;
     white-space: nowrap;
+}
+
+html[lang="en"] .navbar-brand {
+    margin-left: 0 !important;
+}
+
+html[lang="en"] .fa-check:before {
+    content: "\f00c";
+    margin-right: 0.5rem;
 }
 
 /* Global Navbar Navigation Links */
@@ -120,17 +163,15 @@ html {
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    /* Moved from .dropdown-menu.show */
     border-radius: var(--border-radius);
-    /* Moved from .dropdown-menu.show */
     box-shadow: var(--box-shadow);
-    /* Moved from .dropdown-menu.show */
 }
 
-.dropdown-item {
+.dropdown-menu .dropdown-item {
     color: var(--light-color);
     text-align: right;
 }
+
 
 .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -141,10 +182,17 @@ html {
     text-decoration: underline;
 }
 
+html[lang="en"] .dropdown-menu .dropdown-item {
+    text-align: left;
+}
+
+html[lang="en"] .dropdown-menu .dropdown-item:hover {
+
+    margin-left: 3px;
+}
+
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    /* Typically handled by Bootstrap JS for hover, but kept if custom behavior */
-    /* Background, border-radius, box-shadow are now in .dropdown-menu above */
 }
 
 /* Brand Text Styles */
@@ -153,10 +201,12 @@ html {
     font-weight: 700;
     color: var(--primary-color);
     line-height: 1;
+    margin-bottom: 0px;
+
 }
 
 .brand-en {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--secondary-color);
     font-weight: 600;
     letter-spacing: 1px;
@@ -1276,14 +1326,25 @@ html {
 }
 
 /* Accordion Styles */
-.accordion-button::after {
-    right: auto !important;
-    /* Override Bootstrap default for RTL */
-    left: 1rem !important;
-    /* Position arrow on the left for RTL */
-    margin-left: 0 !important;
-    margin-right: auto;
+/* Accordion arrow for LTR (English) */
+[dir="ltr"] .accordion-button::after {
+    left: auto !important;
+    /* Position arrow on the right */
+    right: 1rem !important;
+    margin-right: 0 !important;
 }
+
+/* Accordion arrow for RTL (Arabic) */
+[dir="rtl"] .accordion-button::after {
+    right: auto !important;
+    /* Override Bootstrap default */
+    left: 1rem !important;
+    /* Position arrow on the left */
+    margin-right: auto !important;
+    /* Equivalent to me-2 */
+    margin-left: 0 !important;
+}
+
 
 .accordion-button:not(.collapsed) {
     color: var(--light-color) !important;
@@ -1402,14 +1463,6 @@ html {
         /* Adjust font size for mobile nav links */
     }
 
-    /* .dropdown-menu, .dropdown-item, .navbar-nav .nav-item.dropdown:hover .dropdown-menu
-       The styling for these elements that was *globally* applied has been moved outside this media query.
-       Only include specific overrides for smaller screens here if needed.
-       For example, if you wanted the dropdown to appear differently only on mobile. */
-
-    /* .brand-ar, .brand-en
-       The font sizes, weights, and colors for these are now global.
-       Only include overrides here if you want them to be different on smaller screens. */
 
     .section-title.text-start::after {
         right: 186px;
@@ -1672,4 +1725,12 @@ html {
 .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: calc(var(--bs-border-width) * -1);
     border-radius: 20px;
+}
+
+.auto-ma {
+    margin-right: 5px;
+}
+
+html[lang="ar"] .auto-ma {
+    margin-left: 5px;
 }

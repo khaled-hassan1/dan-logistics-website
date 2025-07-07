@@ -15,49 +15,54 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img\logo.png" alt="" class="logo-icon"
-                        style="background-color: transparent; width: 50px; height: 50px;">
-
+                    <div class="logo-image-placeholder"></div>
                     <div class="logo-text">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                        <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
                     </div>
                 </div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">الرئيسية</a>
+                        <a id="homeNav" class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
+                            <span id="servicesNav">خدماتنا</span> <i class="fas fa-chevron-down ms-1"
+                                style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
-                            <li><a class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a class="dropdown-item" href="warehousing.html">التخزين</a></li>
+                            <li><a id="allServices" class="dropdown-item active" href="services.html">جميع الخدمات</a>
+                            </li>
+                            <li><a id="landShipping" class="dropdown-item" href="land-shipping.html">الشحن البري</a>
+                            </li>
+                            <li><a id="seaShipping" class="dropdown-item" href="sea-shipping.html">الشحن البحري</a></li>
+                            <li><a id="airShipping" class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
+                            <li><a id="warehousing" class="dropdown-item" href="warehousing.html">التخزين</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="track.html">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
+                    <div class="d-flex my-2 my-lg-0 justify-content-center">
+                        <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -70,8 +75,8 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">جميع الخدمات</h1>
-                        <p class="hero-subtitle">
+                        <h1 class="hero-title" id="servicesHeroTitle">جميع الخدمات</h1>
+                        <p class="hero-subtitle" id="servicesHeroSubtitle">
                             اكتشف مجموعتنا الكاملة من الحلول اللوجستية المتكاملة المصممة لتلبية كافة احتياجات عملك من
                             الشحن السريع والآمن إلى التخزين المتقدم والخدمات الجمركية المتخصصة. نضمن لك سلاسة وكفاءة في
                             كل خطوة.
@@ -84,12 +89,14 @@
         </div>
     </section>
 
+
     <section class="services-overview py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">حلول لوجستية شاملة</h2>
-                    <p class="section-subtitle">نقدم مجموعة متكاملة من الخدمات اللوجستية التي تلبي جميع احتياجاتك وتدعم
+                    <h2 class="section-title" id="servicesOverviewTitle">حلول لوجستية شاملة</h2>
+                    <p class="section-subtitle" id="servicesOverviewSubtitle">نقدم مجموعة متكاملة من الخدمات اللوجستية
+                        التي تلبي جميع احتياجاتك وتدعم
                         نمو أعمالك بكفاءة وفعالية عالية.</p>
                 </div>
             </div>
@@ -105,19 +112,28 @@
                             <div class="service-icon">
                                 <i class="fas fa-truck"></i>
                             </div>
-                            <h4 class="text-center">الشحن البري</h4>
-                            <p class="text-center">خدمات الشحن البري السريعة والآمنة لجميع أنحاء المملكة ودول الخليج مع
+                            <h4 class="text-center" id="landShippingCardTitle">الشحن البري</h4>
+                            <p class="text-center" id="landShippingCardText">خدمات الشحن البري السريعة والآمنة لجميع
+                                أنحاء المملكة ودول الخليج مع
                                 ضمان الوصول في الوقت المحدد. نمتلك أسطولًا ضخمًا من الشاحنات الحديثة والمتنوعة لضمان نقل
                                 آمن وفعال لجميع أنواع البضائع، من الشحنات الصغيرة إلى البضائع الثقيلة وكبيرة الحجم.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تتبع الشحنات على مدار الساعة عبر أنظمة GPS متطورة.</li>
-                                <li><i class="fas fa-check"></i> أسطول حديث ومجهز بأفضل تقنيات النقل.</li>
-                                <li><i class="fas fa-check"></i> تأمين شامل على البضائع لحمايتها من أي مخاطر غير متوقعة.
-                                </li>
-                                <li><i class="fas fa-check"></i> حلول نقل مبردة للبضائع الحساسة.</li>
+                                <li><i class="fas fa-check"></i> <span id="landShippingFeature1">تتبع الشحنات على مدار
+                                        الساعة
+                                        عبر أنظمة GPS متطورة.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="landShippingFeature2">أسطول حديث ومجهز بأفضل
+                                        تقنيات
+                                        النقل.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="landShippingFeature3">تأمين شامل على البضائع
+                                        لحمايتها من أي مخاطر غير متوقعة.
+                                    </span></li>
+                                <li><i class="fas fa-check"></i> <span id="landShippingFeature4">حلول نقل مبردة للبضائع
+                                        الحساسة.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="land-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="land-shipping.html" class="btn btn-primary" id="landShippingReadMore">اعرف
+                                    المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,19 +148,28 @@
                             <div class="service-icon">
                                 <i class="fas fa-ship"></i>
                             </div>
-                            <h4 class="text-center">الشحن البحري</h4>
-                            <p class="text-center">حلول الشحن البحري الاقتصادية للبضائع الثقيلة والشحنات الكبيرة مع شبكة
+                            <h4 class="text-center" id="seaShippingCardTitle">الشحن البحري</h4>
+                            <p class="text-center" id="seaShippingCardText">حلول الشحن البحري الاقتصادية للبضائع الثقيلة
+                                والشحنات الكبيرة مع شبكة
                                 واسعة من الموانئ العالمية. نقدم خيارات مرنة للشحن بالحاويات الكاملة (FCL) والجزئية (LCL)
                                 لتناسب جميع الأحجام والميزانيات، مع الالتزام بالمواعيد النهائية العالمية.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> شحن الحاويات الكاملة والجزئية بأسعار تنافسية.</li>
-                                <li><i class="fas fa-check"></i> خدمات التخليص الجمركي في الموانئ العالمية والمحلية.
-                                </li>
-                                <li><i class="fas fa-check"></i> تغطية عالمية واسعة للوصول إلى أي وجهة بحرية.</li>
-                                <li><i class="fas fa-check"></i> حلول شحن مخصصة للمشاريع الكبرى.</li>
+                                <li><i class="fas fa-check"></i> <span id="seaShippingFeature1">شحن الحاويات الكاملة
+                                        والجزئية
+                                        بأسعار تنافسية.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="seaShippingFeature2">خدمات التخليص الجمركي في
+                                        الموانئ العالمية والمحلية.
+                                    </span></li>
+                                <li><i class="fas fa-check"></i> <span id="seaShippingFeature3">تغطية عالمية واسعة
+                                        للوصول إلى
+                                        أي وجهة بحرية.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="seaShippingFeature4">حلول شحن مخصصة للمشاريع
+                                        الكبرى.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="sea-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="sea-shipping.html" class="btn btn-primary" id="seaShippingReadMore">اعرف
+                                    المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,18 +184,28 @@
                             <div class="service-icon">
                                 <i class="fas fa-plane"></i>
                             </div>
-                            <h4 class="text-center">الشحن الجوي</h4>
-                            <p class="text-center">خدمات الشحن الجوي السريع للبضائع العاجلة والمواد الحساسة مع ضمان
+                            <h4 class="text-center" id="airShippingCardTitle">الشحن الجوي</h4>
+                            <p class="text-center" id="airShippingCardText">خدمات الشحن الجوي السريع للبضائع العاجلة
+                                والمواد الحساسة مع ضمان
                                 السرعة والأمان. نقدم حلولًا فعالة من حيث التكلفة والوقت للشحنات التي تتطلب سرعة فائقة،
                                 مع الاهتمام بأدق التفاصيل لضمان وصولها بحالة ممتازة.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تسليم سريع خلال 24-48 ساعة للشحنات العاجلة.</li>
-                                <li><i class="fas fa-check"></i> مناولة خاصة للبضائع الحساسة والقيمة.</li>
-                                <li><i class="fas fa-check"></i> شبكة مطارات عالمية تضمن الوصول لأي مكان.</li>
-                                <li><i class="fas fa-check"></i> خدمات الشحن المبرد جوًا.</li>
+                                <li><i class="fas fa-check"></i> <span id="airShippingFeature1">تسليم سريع خلال 24-48
+                                        ساعة
+                                        للشحنات العاجلة.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="airShippingFeature2">مناولة خاصة للبضائع
+                                        الحساسة
+                                        والقيمة.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="airShippingFeature3">شبكة مطارات عالمية تضمن
+                                        الوصول
+                                        لأي مكان.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="airShippingFeature4">حلول الشحن المبرد
+                                        جوًا.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="air-shipping.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="air-shipping.html" class="btn btn-primary" id="airShippingReadMore">اعرف
+                                    المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,18 +219,29 @@
                             <div class="service-icon">
                                 <i class="fas fa-warehouse"></i>
                             </div>
-                            <h4 class="text-center">التخزين</h4>
-                            <p class="text-center">مرافق تخزين آمنة ومجهزة بأحدث التقنيات لحفظ البضائع مع أنظمة إدارة
+                            <h4 class="text-center" id="warehousingCardTitle">التخزين</h4>
+                            <p class="text-center" id="warehousingCardText">مرافق تخزين آمنة ومجهزة بأحدث التقنيات لحفظ
+                                البضائع مع أنظمة إدارة
                                 المخزون المتطورة. توفر مستودعاتنا بيئة تحكم كاملة في درجة الحرارة والرطوبة، مما يضمن
                                 الحفاظ على جودة المنتجات، بالإضافة إلى خدمات التخزين الجمركي والتخزين المؤقت.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> مساحات تخزين مرنة تناسب جميع الأحجام والأنواع.</li>
-                                <li><i class="fas fa-check"></i> أنظمة أمان متقدمة وكاميرات مراقبة 24/7.</li>
-                                <li><i class="fas fa-check"></i> إدارة المخزون الإلكترونية لتحكم دقيق وفعال.</li>
-                                <li><i class="fas fa-check"></i> خدمات التعبئة والتغليف داخل المستودعات.</li>
+                                <li><i class="fas fa-check"></i> <span id="warehousingFeature1">مساحات تخزين مرنة تناسب
+                                        جميع
+                                        الأحجام والأنواع.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="warehousingFeature2">أنظمة أمان متقدمة
+                                        وكاميرات
+                                        مراقبة 24/7.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="warehousingFeature3">إدارة المخزون
+                                        الإلكترونية
+                                        لتحكم دقيق وفعال.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="warehousingFeature4">خدمات التعبئة والتغليف
+                                        داخل
+                                        المستودعات.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="warehousing.html"
-                                    class="btn btn-primary">اعرف المزيد</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="warehousing.html" class="btn btn-primary" id="warehousingReadMore">اعرف
+                                    المزيد</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,18 +256,26 @@
                             <div class="service-icon">
                                 <i class="fas fa-box"></i>
                             </div>
-                            <h4 class="text-center">التعبئة والتغليف</h4>
-                            <p class="text-center">خدمات التعبئة والتغليف المتخصصة لحماية البضائع أثناء النقل مع استخدام
+                            <h4 class="text-center" id="packagingCardTitle">التعبئة والتغليف</h4>
+                            <p class="text-center" id="packagingCardText">خدمات التعبئة والتغليف المتخصصة لحماية البضائع
+                                أثناء النقل مع استخدام
                                 أفضل المواد. سواء كانت بضائعك حساسة، قابلة للكسر، أو تحتاج إلى حماية خاصة، فإن فريقنا
                                 المدرب يستخدم أحدث التقنيات والمواد لضمان سلامتها حتى وصولها إلى وجهتها النهائية.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> مواد تغليف عالية الجودة وصديقة للبيئة.</li>
-                                <li><i class="fas fa-check"></i> تغليف مخصص حسب نوع البضاعة وحجمها ومتطلبات الشحن.</li>
-                                <li><i class="fas fa-check"></i> ضمان الحماية الكاملة ضد الصدمات والضغوط.</li>
-                                <li><i class="fas fa-check"></i> حلول تعبئة وتغليف صناعية وتجارية.</li>
+                                <li><i class="fas fa-check"></i> <span id="packagingFeature1">مواد تغليف عالية الجودة
+                                        وصديقة
+                                        للبيئة.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="packagingFeature2">تغليف مخصص حسب نوع البضاعة
+                                        وحجمها ومتطلبات الشحن.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="packagingFeature3">ضمان الحماية الكاملة ضد
+                                        الصدمات
+                                        والضغوط.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="packagingFeature4">حلول تعبئة وتغليف صناعية
+                                        وتجارية.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="contact.html"
-                                    class="btn btn-primary">اطلب الخدمة</a>
+                            <div class="d-flex justify-content-center">
+                                <a href="contact.html" class="btn btn-primary" id="packagingRequestService">اطلب
+                                    الخدمة</a>
                             </div>
                         </div>
                     </div>
@@ -237,18 +291,27 @@
                             <div class="service-icon">
                                 <i class="fas fa-clipboard-check"></i>
                             </div>
-                            <h4 class="text-center">الخدمات الجمركية</h4>
-                            <p class="text-center">إنجاز المعاملات الجمركية والتخليص الجمركي بسرعة ودقة مع فريق من
+                            <h4 class="text-center" id="customsCardTitle">الخدمات الجمركية</h4>
+                            <p class="text-center" id="customsCardText">إنجاز المعاملات الجمركية والتخليص الجمركي بسرعة
+                                ودقة مع فريق من
                                 الخبراء المتخصصين. نقدم حلولاً متكاملة لتسهيل عملية الاستيراد والتصدير، ونتعامل مع جميع
                                 الإجراءات القانونية والوثائق المطلوبة لضمان مرور بضائعك بسلاسة ودون تأخير.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> تخليص جمركي سريع لتقليل وقت الانتظار.</li>
-                                <li><i class="fas fa-check"></i> استشارات جمركية متخصصة للامتثال لجميع اللوائح.</li>
-                                <li><i class="fas fa-check"></i> متابعة المعاملات الحكومية بدقة واحترافية.</li>
-                                <li><i class="fas fa-check"></i> تمثيل العملاء أمام الجهات الجمركية.</li>
+                                <li><i class="fas fa-check"></i> <span id="customsFeature1">تخليص جمركي سريع لتقليل وقت
+                                        الانتظار.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="customsFeature2">استشارات جمركية متخصصة
+                                        للامتثال
+                                        لجميع اللوائح.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="customsFeature3">متابعة المعاملات الحكومية
+                                        بدقة
+                                        واحترافية.</span></li>
+                                <li><i class="fas fa-check"></i> <span id="customsFeature4">تمثيل العملاء أمام الجهات
+                                        الجمركية.</span></li>
                             </ul>
-                            <div class="d-flex justify-content-center"> <a href="contact.html"
-                                    class="btn btn-primary">اطلب الخدمة</a></div>
+                            <div class="d-flex justify-content-center">
+                                <a href="contact.html" class="btn btn-primary" id="customsRequestService">اطلب
+                                    الخدمة</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,8 +323,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">لماذا تختار خدماتنا؟</h2>
-                    <p class="section-subtitle">مميزات تجعلنا الخيار الأفضل لاحتياجاتك اللوجستية وتضمن لك تجربة فريدة
+                    <h2 class="section-title" id="whyChooseUsTitle">لماذا تختار خدماتنا؟</h2>
+                    <p class="section-subtitle" id="whyChooseUsSubtitle">مميزات تجعلنا الخيار الأفضل لاحتياجاتك
+                        اللوجستية وتضمن لك تجربة فريدة
                         وموثوقة.</p>
                 </div>
             </div>
@@ -272,8 +336,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h5>التسليم في الوقت المحدد</h5>
-                        <p>نضمن وصول شحناتك في المواعيد المحددة بدقة 99% مما يوفر لك راحة البال ويجنبك أي تأخيرات غير
+                        <h5 id="feature1Title">التسليم في الوقت المحدد</h5>
+                        <p id="feature1Content">نضمن وصول شحناتك في المواعيد المحددة بدقة 99% مما يوفر لك راحة البال
+                            ويجنبك أي تأخيرات غير
                             مرغوبة.</p>
                     </div>
                 </div>
@@ -283,8 +348,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h5>أمان وحماية</h5>
-                        <p>أعلى مستويات الأمان والتأمين الشامل على جميع الشحنات مع تطبيق بروتوكولات صارمة لحماية بضائعك.
+                        <h5 id="feature2Title">أمان وحماية</h5>
+                        <p id="feature2Content">أعلى مستويات الأمان والتأمين الشامل على جميع الشحنات مع تطبيق بروتوكولات
+                            صارمة لحماية بضائعك.
                         </p>
                     </div>
                 </div>
@@ -294,8 +360,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-dollar-sign"></i>
                         </div>
-                        <h5>أسعار تنافسية</h5>
-                        <p>أفضل الأسعار في السوق مع جودة عالية في الخدمة مما يضمن لك قيمة ممتازة مقابل استثمارك.</p>
+                        <h5 id="feature3Title">أسعار تنافسية</h5>
+                        <p id="feature3Content">أفضل الأسعار في السوق مع جودة عالية في الخدمة مما يضمن لك قيمة ممتازة
+                            مقابل استثمارك.</p>
                     </div>
                 </div>
 
@@ -304,8 +371,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <h5>دعم 24/7</h5>
-                        <p>فريق خدمة العملاء متاح على مدار الساعة لمساعدتك والإجابة على جميع استفساراتك وتقديم الدعم
+                        <h5 id="feature4Title">دعم 24/7</h5>
+                        <p id="feature4Content">فريق خدمة العملاء متاح على مدار الساعة لمساعدتك والإجابة على جميع
+                            استفساراتك وتقديم الدعم
                             الفني.</p>
                     </div>
                 </div>
@@ -317,38 +385,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">هل تحتاج إلى خدمة لوجستية مخصصة؟</h2>
-                    <p class="text-white mb-4">تواصل معنا اليوم واحصل على استشارة مجانية وحلول مخصصة لاحتياجاتك ومعرفة
+                    <h2 class="text-white mb-4" id="ctaTitle">هل تحتاج إلى خدمة لوجستية مخصصة؟</h2>
+                    <p class="text-white mb-4" id="ctaSubtitle">تواصل معنا اليوم واحصل على استشارة مجانية وحلول مخصصة
+                        لاحتياجاتك ومعرفة
                         كيف يمكننا أن نكون شريكك اللوجستي الأمثل.</p>
                     <div class="cta-buttons">
-                        <a href="tel:0112758699" class="btn btn-outline-light btn-lg">اتصل بنا الآن</a>
+                        <a href="tel:0112758699" class="btn btn-outline-light btn-lg" id="ctaButton">اتصل بنا الآن</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section bg-dark text-light py-5 ">
+
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <a class="navbar-brand" href="index.html">
-                                <div class="logo-container">
-                                    <img src="img\logo.png" alt="logo">
-                                    <div class="logo-text text-center text-lg-end">
-                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="logo-container  d-flex justify-content-center mb-2">
+                            <div class="logo-image-placeholder"></div>
+                            <div class="logo-text">
+                                <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
+                            </div>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
-                            الجودة في الشحن والنقل
+                        <p class="text-center text-lg-center" id="footerDescription">شريكك الموثوق في الحلول اللوجستية
+                            المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل
                             والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
                             بضائعك إلى وجهتها بأمان وكفاءة.</p>
-                        <div class="social-links d-flex justify-content-center justify-content-lg-start">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-center">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -358,32 +424,38 @@
                 </div>
 
                 <div class="col-lg-2 text-center">
-                    <h5>الروابط السريعة</h5>
+                    <h5 id="quickLinksTitle">الروابط السريعة</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="index.html" id="footerHomeLink">الرئيسية</a></li>
+                        <li><a href="about.html" id="footerAboutLink">من نحن</a></li>
+                        <li><a href="services.html" id="footerServicesLink">خدماتنا</a></li>
+                        <li><a href="track.html" id="footerTrackLink">تتبع الطلب</a></li>
+                        <li><a href="contact.html" id="footerContactLink">اتصل بنا</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>خدماتنا</h5>
+                    <h5 id="servicesTitle">خدماتنا</h5>
                     <ul class="footer-links">
-                        <li><a href="land-shipping.html">الشحن البري</a></li>
-                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
-                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
-                        <li><a href="warehousing.html">التخزين</a></li>
+                        <li><a href="land-shipping.html" id="footerLandShippingLink">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html" id="footerSeaShippingLink">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html" id="footerAirShippingLink">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html" id="footerWarehousingLink">التخزين</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>معلومات التواصل</h5>
+                    <h5 id="contactInfoTitle">معلومات التواصل</h5>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
-                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
-                        <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
+                        <p><i class="fas fa-map-marker-alt auto-ma"></i><span id="addressText">الرياض، حي قرطبة، المملكة
+                                العربية السعودية</span></p>
+                        <p><i class="fas fa-phone auto-ma"></i><span id="phoneNumber" class="ltr-number">011 275
+                                8699</span></p>
+                        <p><i class="fas fa-envelope auto-ma"></i><span id="emailAddress">info@danlogistics.com</span>
+                        </p>
+                        <p><i class="fas fa-clock auto-ma"></i><span id="workingHours">السبت - الخميس: 8:00 -
+                                18:00</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -393,8 +465,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p>
-                        &copy; <span id="currentYear">2025</span> دعن للخدمات اللوجستية. جميع الحقوق محفوظة. |
-                        <span>صمم بواسطة <a href="https://aaplans.com/" class="designer-link">AAPlans</a></span>
+                        © <span id="currentYear">2025</span> <span id="copyrightText">دعن للخدمات اللوجستية. جميع الحقوق
+                            محفوظة.</span> |
+                        <span id="designedBy">صمم بواسطة</span> <a href="https://aaplans.com/"
+                            class="designer-link">AAPlans</a>
                     </p>
                 </div>
             </div>

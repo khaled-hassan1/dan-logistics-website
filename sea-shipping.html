@@ -14,53 +14,59 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" dir="rtl">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-image-placeholder"></div>
                     <div class="logo-text">
-                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
+                        <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                        <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
                     </div>
                 </div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">الرئيسية</a>
+                        <a id="homeNav" class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown">
-                            خدماتنا <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i>
+                            <span id="servicesNav">خدماتنا</span> <i class="fas fa-chevron-down ms-1"
+                                style="font-size: 0.8em;"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">جميع الخدمات</a></li>
-                            <li><a class="dropdown-item" href="land-shipping.html">الشحن البري</a></li>
-                            <li><a class="dropdown-item active" href="sea-shipping.html">الشحن البحري</a></li>
-                            <li><a class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
-                            <li><a class="dropdown-item" href="warehousing.html">التخزين</a></li>
+                            <li><a id="allServices" class="dropdown-item" href="services.html">جميع الخدمات</a></li>
+                            <li><a id="landShipping" class="dropdown-item" href="land-shipping.html">الشحن البري</a>
+                            </li>
+                            <li><a id="seaShipping" class="dropdown-item active" href="sea-shipping.html">الشحن
+                                    البحري</a></li>
+                            <li><a id="airShipping" class="dropdown-item" href="air-shipping.html">الشحن الجوي</a></li>
+                            <li><a id="warehousing" class="dropdown-item" href="warehousing.html">التخزين</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="track.html">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
+                    <div class="d-flex my-2 my-lg-0 justify-content-center">
+                        <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
-
     <section class="hero-section">
         <div class="hero-overlay bg-sea-shipping"></div>
 
@@ -68,13 +74,14 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">الشحن البحري</h1>
-                        <p class="hero-subtitle">
+                        <h1 class="hero-title" id="seaShippingHeroTitle">الشحن البحري</h1>
+                        <p class="hero-subtitle" id="seaShippingHeroSubtitle">
                             حلول شحن بحري عالمية وموثوقة لشحناتك الكبيرة، توفر لك الكفاءة والتكلفة الفعالة للوصول إلى أي
                             ميناء حول العالم، مع ضمان أعلى مستويات الأمان والجودة.
                         </p>
                         <div class="hero-buttons">
-                            <a href="services.html" class="btn btn-primary btn-lg">استكشف خدماتنا</a>
+                            <a href="services.html" class="btn btn-primary btn-lg"
+                                id="seaShippingExploreServicesButton">استكشف خدماتنا</a>
                         </div>
                     </div>
                 </div>
@@ -90,60 +97,71 @@
                         alt="Sea Shipping">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="section-title text-start">خدمات الشحن البحري الفعالة</h2>
-                    <p class="explain-service">نقدم حلول شحن بحري مخصصة للحمولات الكبيرة والصغيرة (FCL و LCL) عبر شبكة
+                    <h2 class="section-title text-start" id="seaShippingDetailTitle">خدمات الشحن البحري الفعالة</h2>
+                    <p class="explain-service" id="seaShippingExplain1">نقدم حلول شحن بحري مخصصة للحمولات الكبيرة
+                        والصغيرة (FCL و LCL) عبر شبكة
                         واسعة من الخطوط الملاحية العالمية. في دعن للخدمات اللوجستية، ندرك أن الشحن البحري هو حجر الزاوية
                         للتجارة الدولية، ولذلك نقدم خدمات متكاملة تضمن سلاسة وأمان شحناتك عبر المحيطات.</p>
-                    <p class="explain-service">نضمن لك أسعارًا تنافسية، جداول زمنية موثوقة، وإدارة كاملة لعمليات الشحن
+                    <p class="explain-service" id="seaShippingExplain2">نضمن لك أسعارًا تنافسية، جداول زمنية موثوقة،
+                        وإدارة كاملة لعمليات الشحن
                         البحري من البداية حتى
                         النهاية. يشمل ذلك التعامل مع جميع الإجراءات اللوجستية والجمركية، مما يوفر عليك الوقت والجهد
                         ويضمن وصول بضائعك إلى وجهتها النهائية بكفاءة.</p>
                     <ul class="list-unstyled service-features mt-4">
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> شحن حمولات كاملة وجزئية
+                        <li id="seaShippingDetailFeature1"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            شحن حمولات كاملة وجزئية
                             (FCL/LCL): سواء كانت شحنتك بحاجة إلى حاوية كاملة (Full Container Load) أو جزء من حاوية (Less
                             than Container Load)، نوفر لك الخيار الأمثل لاحتياجاتك وميزانيتك.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> شبكة واسعة من الموانئ العالمية:
+                        <li id="seaShippingDetailFeature2"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            شبكة واسعة من الموانئ العالمية:
                             نتمتع بعلاقات قوية مع كبرى شركات الشحن البحري حول العالم، مما يمنحنا القدرة على الوصول إلى
                             معظم الموانئ الرئيسية وتوفير حلول شحن بحري دولية فعالة.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> أسعار تنافسية وجداول زمنية مرنة:
+                        <li id="seaShippingDetailFeature3"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            أسعار تنافسية وجداول زمنية مرنة:
                             نقدم أسعارًا مجدية اقتصاديًا تناسب جميع الميزانيات، بالإضافة إلى جداول زمنية مرنة تتناسب مع
                             احتياجات عملك وتوقعات التسليم.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> حلول نقل متعدد الوسائط
+                        <li id="seaShippingDetailFeature4"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            حلول نقل متعدد الوسائط
                             (Multimodal): نوفر حلول نقل متكاملة تجمع بين الشحن البحري والبري أو الجوي، لضمان وصول شحناتك
                             من الباب إلى الباب بأقصى كفاءة وسلاسة.</li>
-                        <li><i class="fas fa-check-circle me-2 icon-custom-color"></i> خدمات التخليص الجمركي: يتولى
+                        <li id="seaShippingDetailFeature5"><i class="fas fa-check-circle me-2 icon-custom-color"></i>
+                            خدمات التخليص الجمركي: يتولى
                             فريقنا المتخصص جميع إجراءات التخليص الجمركي في موانئ الشحن والوصول، لضمان سرعة الإفراج عن
                             بضائعك وتجنب أي تأخيرات غير ضرورية.</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary mt-4">اطلب عرض سعر</a>
+                    <a href="contact.html" class="btn btn-primary mt-4" id="seaShippingRequestQuoteButton">اطلب عرض
+                        سعر</a>
                 </div>
             </div>
 
             <div class="row mt-5">
                 <div class="col-12">
-                    <h3 class="text-center mb-4">لماذا تختار الشحن البحري معنا؟</h3>
+                    <h3 class="text-center mb-4" id="whyChooseSeaShippingTitle">لماذا تختار الشحن البحري معنا؟</h3>
                     <div class="row text-center service-steps">
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-boxes fa-3x icon-custom-color mb-3"></i>
-                                <h5>1. حمولات كبيرة</h5>
-                                <p>الشحن البحري هو الخيار الأمثل لنقل الكميات الضخمة والأحجام الكبيرة من البضائع بكفاءة
+                                <h5 id="seaShippingFeatureCard1Title">1. حمولات كبيرة</h5>
+                                <p id="seaShippingFeatureCard1Text">الشحن البحري هو الخيار الأمثل لنقل الكميات الضخمة
+                                    والأحجام الكبيرة من البضائع بكفاءة
                                     عالية، مما يجعله الحل الأمثل للشركات ذات الاحتياجات اللوجستية الكبيرة.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-wallet fa-3x icon-custom-color mb-3"></i>
-                                <h5>2. فعالية التكلفة</h5>
-                                <p>يعتبر الشحن البحري الحل الأكثر اقتصادية للشحن الدولي لمسافات طويلة، مما يساعد الشركات
+                                <h5 id="seaShippingFeatureCard2Title">2. فعالية التكلفة</h5>
+                                <p id="seaShippingFeatureCard2Text">يعتبر الشحن البحري الحل الأكثر اقتصادية للشحن الدولي
+                                    لمسافات طويلة، مما يساعد الشركات
                                     على توفير التكاليف اللوجستية دون المساومة على جودة الخدمة أو أمان الشحنة.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="p-3 border rounded h-100">
                                 <i class="fas fa-globe fa-3x icon-custom-color mb-3"></i>
-                                <h5>3. تغطية عالمية</h5>
-                                <p>بفضل شبكتنا الواسعة وعلاقاتنا مع شركات الشحن العالمية، يمكننا الوصول إلى أي ميناء
+                                <h5 id="seaShippingFeatureCard3Title">3. تغطية عالمية</h5>
+                                <p id="seaShippingFeatureCard3Text">بفضل شبكتنا الواسعة وعلاقاتنا مع شركات الشحن
+                                    العالمية، يمكننا الوصول إلى أي ميناء
                                     رئيسي في العالم، مما يفتح لعملائنا آفاقًا جديدة للتجارة الدولية.</p>
                             </div>
                         </div>
@@ -157,38 +175,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">هل تخطط لشحنة بحرية دولية أو تحتاج إلى حلول لوجستية متكاملة؟</h2>
-                    <p class="text-white mb-4">نحن هنا لنجعل العملية سهلة وفعالة وموثوقة، تواصل معنا اليوم لتحصل على
+                    <h2 class="text-white mb-4" id="seaShippingCtaTitle">هل تخطط لشحنة بحرية دولية أو تحتاج إلى حلول
+                        لوجستية متكاملة؟</h2>
+                    <p class="text-white mb-4" id="seaShippingCtaSubtitle">نحن هنا لنجعل العملية سهلة وفعالة وموثوقة،
+                        تواصل معنا اليوم لتحصل على
                         استشارة مجانية وعرض سعر مخصص.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">تحدث مع خبير</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg" id="seaShippingCtaButton">تحدث مع
+                            خبير</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section bg-dark text-light py-5 ">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <div class="logo-container d-flex justify-content-center justify-content-lg-start">
-                            <a class="navbar-brand" href="index.html">
-                                <div class="logo-container">
-                                    <img src="img\logo.png" alt="logo">
-                                    <div class="logo-text text-center text-lg-end">
-                                        <span class="brand-ar">دعن للخدمات اللوجستية</span>
-                                        <span class="brand-en">DAN LOGISTIC SERVICES</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="logo-container  d-flex justify-content-center mb-2">
+                            <div class="logo-image-placeholder"></div>
+                            <div class="logo-text">
+                                <span class="brand-ar" id="brandAr">دعن للخدمات اللوجستية</span>
+                                <span class="brand-en" id="brandEn">DAN LOGISTIC SERVICES</span>
+                            </div>
                         </div>
-                        <p class="text-center text-lg-end">شريكك الموثوق في الحلول اللوجستية المتكاملة. نقدم خدمات عالية
-                            الجودة في الشحن والنقل
+                        <p class="text-center text-lg-center" id="footerDescription">شريكك الموثوق في الحلول اللوجستية
+                            المتكاملة. نقدم خدمات عالية الجودة في الشحن والنقل
                             والتخزين. نحن ملتزمون بدعم نمو أعمالك من خلال توفير حلول لوجستية مبتكرة وفعالة تضمن وصول
                             بضائعك إلى وجهتها بأمان وكفاءة.</p>
-                        <div class="social-links d-flex justify-content-center justify-content-lg-start">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-center">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -198,32 +215,38 @@
                 </div>
 
                 <div class="col-lg-2 text-center">
-                    <h5>الروابط السريعة</h5>
+                    <h5 id="quickLinksTitle">الروابط السريعة</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="index.html" id="footerHomeLink">الرئيسية</a></li>
+                        <li><a href="about.html" id="footerAboutLink">من نحن</a></li>
+                        <li><a href="services.html" id="footerServicesLink">خدماتنا</a></li>
+                        <li><a href="track.html" id="footerTrackLink">تتبع الطلب</a></li>
+                        <li><a href="contact.html" id="footerContactLink">اتصل بنا</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>خدماتنا</h5>
+                    <h5 id="servicesTitle">خدماتنا</h5>
                     <ul class="footer-links">
-                        <li><a href="land-shipping.html">الشحن البري</a></li>
-                        <li><a href="sea-shipping.html">الشحن البحري</a></li>
-                        <li><a href="air-shipping.html">الشحن الجوي</a></li>
-                        <li><a href="warehousing.html">التخزين</a></li>
+                        <li><a href="land-shipping.html" id="footerLandShippingLink">الشحن البري</a></li>
+                        <li><a href="sea-shipping.html" id="footerSeaShippingLink">الشحن البحري</a></li>
+                        <li><a href="air-shipping.html" id="footerAirShippingLink">الشحن الجوي</a></li>
+                        <li><a href="warehousing.html" id="footerWarehousingLink">التخزين</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 text-center">
-                    <h5>معلومات التواصل</h5>
+                    <h5 id="contactInfoTitle">معلومات التواصل</h5>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> الرياض، حي قرطبة، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone me-2"></i><span class="ltr-number">011 275 8699 </span></p>
-                        <p><i class="fas fa-envelope me-2"></i> info@danlogistics.com</p>
-                        <p><i class="fas fa-clock me-2"></i> السبت - الخميس: 8:00 - 18:00</p>
+                        <p><i class="fas fa-map-marker-alt auto-ma"></i><span id="addressText">الرياض، حي قرطبة، المملكة
+                                العربية السعودية</span></p>
+                        <p><i class="fas fa-phone auto-ma"></i><span id="phoneNumber" class="ltr-number">011 275
+                                8699</span></p>
+                        <p><i class="fas fa-envelope auto-ma"></i><span id="emailAddress">info@danlogistics.com</span>
+                        </p>
+                        <p><i class="fas fa-clock auto-ma"></i><span id="workingHours">السبت - الخميس: 8:00 -
+                                18:00</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -233,8 +256,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p>
-                        &copy; <span id="currentYear">2025</span> دعن للخدمات اللوجستية. جميع الحقوق محفوظة. |
-                        <span>صمم بواسطة <a href="https://aaplans.com/" class="designer-link">AAPlans</a></span>
+                        © <span id="currentYear">2025</span> <span id="copyrightText">دعن للخدمات اللوجستية. جميع الحقوق
+                            محفوظة.</span> |
+                        <span id="designedBy">صمم بواسطة</span> <a href="https://aaplans.com/"
+                            class="designer-link">AAPlans</a>
                     </p>
                 </div>
             </div>
