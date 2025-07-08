@@ -465,7 +465,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const elementsToTranslate = {
         // Page Title
-        pageTitle: { en: "Dan Logistic Services - Home", ar: "دعن للخدمات اللوجستية - الرئيسية" },
+        homePageTitle: { en: "Dan Logistic Services - Home", ar: "دعن للخدمات اللوجستية - الرئيسية" },
+        aboutPageTitle: { en: "About Us - Dan Logistic Services", ar: "من نحن - دعن للخدمات اللوجستية" },
+        airShippingPageTitle: { en: "Dan Logistic Services - Air Shipping", ar: "دعن للخدمات اللوجستية - الشحن الجوي" },
+        contactPageTitle: { en: "Contact Us - Dan Logistic Services", ar: "اتصل بنا - دعن للخدمات اللوجستية" },
+        landShippingPageTitle: { en: "Dan Logistic Services - Land Shipping", ar: "دعن للخدمات اللوجستية - الشحن البري" },
+        seaShippingPageTitle: { en: "Dan Logistic Services - Sea Shipping", ar: "دعن للخدمات اللوجستية - الشحن البحري" },
+        servicesPageTitle: { en: "Our Services - Dan Logistic Services", ar: "خدماتنا - دعن للخدمات اللوجستية" },
+        trackPageTitle: { en: "Dan Logistic Services - Track Order", ar: "دعن للخدمات اللوجستية - تتبع الطلب" },
+        warehousingPageTitle: { en: "Dan Logistic Services - Warehousing", ar: "دعن للخدمات اللوجستية - التخزين" },
 
         // Navigation
         homeNav: { en: "Home", ar: "الرئيسية" },
