@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="trackPageTitle">دعن للخدمات اللوجستية - تتبع الطلب</title>
+    <title id="titleFaqs">الأسئلة الشائعة - دعن للخدمات اللوجستية</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -62,7 +62,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="track.html" id="trackNav">تتبع الطلب</a>
+                        <a class="nav-link" href="track.html" id="trackNav">تتبع الطلب</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html" id="aboutNav">من نحن</a>
@@ -70,7 +70,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html" id="contactNav">اتصل بنا</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link " href="faq.html" id="faqHeroTitle">الأسئلة الشائعة</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html" id="faqHeroTitle">الأسئلة
+                            الشائعة</a></li>
                     <div class="d-flex my-2 my-lg-0 justify-content-center">
                         <a href="#" id="languageButton" class="btn btn-primary py-2 px-4">EN</a>
                     </div>
@@ -79,143 +80,153 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-overlay bg-track"></div>
+        <div class="hero-overlay bg-faq"></div>
 
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title" id="trackingHeroTitle">تتبع شحنتك</h1>
-                        <p class="hero-subtitle" id="trackingHeroSubtitle">
-                            أدخل رقم التتبع الخاص بك للحصول على أحدث المعلومات حول حالة شحنتك.
+                        <h1 class="hero-title" id="faqHeroTitle2">الأسئلة الشائعة</h1>
+                        <p class="hero-subtitle" id="faqHeroSubtitle">
+                            تجد هنا إجابات على أكثر الأسئلة التي يطرحها عملاؤنا حول خدماتنا اللوجستية، الشحن، التخزين،
+                            والتتبع. هدفنا هو تيسير تجربتك وتقديم كل المعلومات التي تحتاجها بسرعة وسهولة.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-    <!-- Tracking Results Section -->
-    <section class="order-tracking-section py-5">
+
+    <section class="faq-section py-5 mt-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card shadow-sm tracking-card">
-                        <div class="btn-primary text-white text-center" style="padding: 10px;border-radius: 0;">
-                            <h3 class="mb-0" id="trackingTitle">تتبع حالة شحنتك</h3>
-                        </div>
-                        <div class="card-body">
-                            <form id="trackingForm">
-                                <div class="mb-4">
-                                    <label for="referenceNumber" class="form-label" id="referenceLabel">رقم المرجع
-                                        (الرفرنس)</label>
-                                    <div class="input-group flex items-center gap-2">
-                                        <input type="text" class="form-control flex-grow" id="referenceNumber"
-                                            data-i18n-placeholder="referencePlaceholder"
-                                            placeholder="أدخل رقم المرجع المكون من 10 أرقام" required>
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" id="faqSectionTitle">الأسئلة الشائعة</h2>
+                    <p class="section-subtitle" id="faqSectionSubtitle">إجابات على أكثر الأسئلة شيوعاً</p>
+                </div>
+            </div>
 
-                                        <button class="btn btn-primary" type="submit" id="trackBtn">
-                                            <i class="fas fa-search me-2"></i> تتبع
-                                        </button>
-                                    </div>
-                                    <small class="text-muted" id="trackingHelp">يمكنك العثور على رقم المرجع في إيصال
-                                        الشحن أو البريد الإلكتروني الخاص بك</small>
-                                </div>
-                            </form>
-
-                            <div id="trackingResult" class="d-none">
-                                <h4 class="text-center mb-4" id="shipmentStatusTitle">حالة الشحنة: <span
-                                        id="statusInTransit" class="badge bg-success">في الطريق</span></h4>
-
-                                <div class="timeline">
-                                    <div class="timeline-step completed">
-                                        <div class="timeline-icon">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h6 id="orderReceived">تم استلام الطلب</h6>
-                                            <p class="text-muted" id="orderReceivedDate">12 يوليو 2025 - 10:30 ص</p>
-                                            <p id="orderReceivedDesc">تم استلام الشحنة في مستودع الرياض</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-step completed">
-                                        <div class="timeline-icon">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h6 id="orderProcessing">معالجة الطلب</h6>
-                                            <p class="text-muted" id="orderProcessingDate">12 يوليو 2025 - 2:15 م</p>
-                                            <p id="orderProcessingDesc">تم تجهيز الشحنة للشحن</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-step active">
-                                        <div class="timeline-icon">
-                                            <i class="fas fa-truck"></i>
-                                        </div>
-                                        PLEASE
-                                        <div class="timeline-content">
-                                            <h6 id="inTransit">في الطريق</h6>
-                                            <p class="text-muted" id="inTransitDate">13 يوليو 2025 - 9:00 ص</p>
-                                            <p id="inTransitDesc">الشحنة في طريقها إلى وجهتها النهائية</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-step">
-                                        <div class="timeline-icon">
-                                            <i class="fas fa-home"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h6 id="delivered">تسليم</h6>
-                                            <p class="text-muted" id="deliveredDate">متوقع: 14 يوليو 2025</p>
-                                            <p id="deliveredDesc">سيتم تسليم الشحنة خلال يوم العمل</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="order-details mt-5">
-                                    <h5 class="mb-4 text-center" id="orderDetailsTitle">تفاصيل الشحنة</h5>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3 mb-md-0">
-                                            <div class="p-3 bg-light rounded">
-                                                <p><strong id="refNumberLabel">رقم المرجع:</strong> <span
-                                                        id="detailRefNumber">DAN-78945612</span></p>
-                                                <p><strong id="shipDateLabel">تاريخ الشحن:</strong> <span
-                                                        id="shipDateValue">12 يوليو 2025</span></p>
-                                                <p><strong id="weightLabel">الوزن:</strong> <span id="weightValue">25
-                                                        كجم</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="p-3 bg-light rounded">
-                                                <p><strong id="fromLabel">من:</strong> <span id="fromValue">الرياض،
-                                                        المملكة العربية السعودية</span></p>
-                                                <p><strong id="toLabel">إلى:</strong> <span id="toValue">جدة، المملكة
-                                                        العربية السعودية</span></p>
-                                                <p><strong id="serviceTypeLabel">نوع الخدمة:</strong> <span
-                                                        id="serviceTypeValue">الشحن البري السريع</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center mt-4">
-                                    <button class="btn btn-outline-primary" id="trackAnotherBtn">
-                                        <i class="fas fa-redo me-2"></i>تتبع شحنة أخرى
-                                    </button>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1" id="faq1Question">
+                                    كم يستغرق الشحن البري داخل المملكة؟
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="faq1Answer">
+                                    يستغرق الشحن البري داخل المملكة من 1-3 أيام عمل حسب المسافة والوجهة. نوفر خدمة
+                                    التتبع المباشر لجميع الشحنات.
                                 </div>
                             </div>
                         </div>
+
+                        <!-- FAQ Item 2 -->
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2" id="faq2Question">
+                                    هل تقدمون خدمة التأمين على الشحنات؟
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="faq2Answer">
+                                    نعم، نقدم تأمين شامل على جميع الشحنات بقيمة تصل إلى 100% من قيمة البضاعة المشحونة.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3" id="faq3Question">
+                                    كيف يمكنني تتبع شحنتي؟
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="faq3Answer">
+                                    يمكنك تتبع شحنتك من خلال موقعنا الإلكتروني أو تطبيق الهاتف المحمول باستخدام رقم
+                                    الشحنة المرسل إليك.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4" id="faq4Question">
+                                    ما هي طرق الدفع المتاحة؟
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="faq4Answer">
+                                    نقبل الدفع نقداً عند الاستلام، التحويل البنكي، البطاقات الائتمانية، والدفع
+                                    الإلكتروني عبر منصات مختلفة.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5" id="question5">
+                                    هل تقدمون خدمة الشحن الدولي؟
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="answer5">
+                                    نعم، نوفر خدمات الشحن الدولي إلى مختلف الدول مع ضمان تتبع الشحنات واستلامها بأمان.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6" id="question6">
+                                    هل يمكنني تعديل بيانات الشحنة بعد تقديم الطلب؟
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="answer6">
+                                    نعم، يمكنك تعديل بيانات الشحنة قبل أن يتم إرسالها، وذلك عن طريق التواصل مع خدمة
+                                    العملاء.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 7 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq7" id="question7">
+                                    هل تتوفر خدمة التوصيل السريع؟
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="answer7">
+                                    نعم، نوفر خدمة التوصيل السريع داخل المدن وفق جدول زمني محدد.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
 
     <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
@@ -294,11 +305,9 @@
         </div>
     </footer>
 
-
     <a href="https://wa.me/0112758699?text=Hello%20Dan%20Logistics%20Services!" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

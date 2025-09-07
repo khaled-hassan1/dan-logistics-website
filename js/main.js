@@ -249,7 +249,7 @@
 
 // // Console message
 // console.log('🚚 مرحباً بك في موقع دعن للخدمات اللوجستية!');
-// console.log('📧 للتواصل: info@danlogistics.com');
+// console.log('📧 للتواصل: info@dan-ls.com');
 // console.log('🌐 الموقع تم تطويره بأحدث التقنيات');
 // Utility function for selecting elements
 
@@ -683,8 +683,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Contact Information
         addressText: { en: "Riyadh, Qurtuba District, Saudi Arabia", ar: "الرياض، حي قرطبة، المملكة العربية السعودية" },
-        phoneNumber: { en: "011 275 8699", ar: "011 275 8699" },
-        emailAddress: { en: "info@danlogistics.com", ar: "info@danlogistics.com" },
+        phoneNumber: { en: "+966 11 274 4412", ar: "+966 11 274 4412" },
+        emailAddress: { en: "info@dan-ls.com", ar: "info@dan-ls.com" },
         workingHours: { en: "Saturday - Thursday: 8:00 - 18:00", ar: "السبت - الخميس: 8:00 - 18:00" },
 
         // Copyright
@@ -752,7 +752,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactLocationDetails: { en: "Riyadh, Qurtubah District, Saudi Arabia", ar: "الرياض، حي قرطبة، المملكة العربية السعودية" },
         contactPhoneTitle: { en: "Phone", ar: "الهاتف" },
         contactEmailTitle: { en: "Email", ar: "البريد الإلكتروني" },
-        contactEmailDetails: { en: "info@danlogistics.com<br>sales@danlogistics.com", ar: "info@danlogistics.com<br>sales@danlogistics.com" }, // Keep as is for emails
+        contactEmailDetails: { en: "info@dan-ls.com<br>info@dan-ls.com", ar: "info@dan-ls.com<br>info@dan-ls.com" }, // Keep as is for emails
         contactHoursTitle: { en: "Working Hours", ar: "ساعات العمل" },
         contactHoursDetails: { en: "Saturday - Thursday: 8:00 - 18:00 Friday: Closed", ar: "السبت - الخميس: 8:00 - 18:00 الجمعة : مغلق" },
         contactCustomerServiceTitle: { en: "Customer Service", ar: "خدمة العملاء" },
@@ -1093,6 +1093,64 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         warehousingExploreServicesButton: { en: "Explore Our Services", ar: "استكشف خدماتنا" },
 
+        // FAQ Page Hero Section
+        titleFaqs: { en: "FAQs - DAN Logistic Services", ar: "الأسئلة الشائعة - دعن للخدمات اللوجستية" },
+        faqHeroTitle: { en: "FAQs", ar: "الأسئلة الشائعة" },
+        faqHeroTitle2: { en: "FAQs", ar: "الأسئلة الشائعة" },
+        faqHeroSubtitle: {
+            en: "Here you can find answers to the most common questions from our clients about our logistics services, shipping, warehousing, and tracking. Our goal is to make your experience easier and provide all the information you need quickly and conveniently.",
+            ar: "تجد هنا إجابات على أكثر الأسئلة التي يطرحها عملاؤنا حول خدماتنا اللوجستية، الشحن، التخزين، والتتبع. هدفنا هو تيسير تجربتك وتقديم كل المعلومات التي تحتاجها بسرعة وسهولة."
+        },
+        question5: { en: "Do you provide international shipping?", ar: "هل تقدمون خدمة الشحن الدولي؟" },
+        answer5: { en: "Yes, we provide international shipping services to various countries with guaranteed tracking and safe delivery.", ar: "نعم، نوفر خدمات الشحن الدولي إلى مختلف الدول مع ضمان تتبع الشحنات واستلامها بأمان." },
+        question6: { en: "Can I modify shipment details after placing the order?", ar: "هل يمكنني تعديل بيانات الشحنة بعد تقديم الطلب؟" },
+        answer6: { en: "Yes, you can modify shipment details before it is dispatched by contacting our customer service.", ar: "نعم، يمكنك تعديل بيانات الشحنة قبل أن يتم إرسالها، وذلك عن طريق التواصل مع خدمة العملاء." },
+        question7: { en: "Do you offer express delivery?", ar: "هل تتوفر خدمة التوصيل السريع؟" },
+        answer7: { en: "Yes, we provide express delivery within cities according to a scheduled timetable.", ar: "نعم، نوفر خدمة التوصيل السريع داخل المدن وفق جدول زمني محدد." },
+        // Policy
+        policyPage: { en: "Privacy Policy - DAN Logistic Services", ar: "سياسة الخصوصية - دعن للخدمات اللوجستية" },
+        policyTitle: { en: "Privacy Policy", ar: "سياسة الخصوصية" },
+        policyTitle2: { en: "Privacy Policy", ar: "سياسة الخصوصية" },
+        heroPolicySubtitle: {
+            en: "We respect your privacy and are committed to protecting your personal data when using our website.",
+            ar: "نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية عند استخدام موقعنا."
+        },
+        dataCollectionText: {
+            en: "We collect the information you provide directly, such as name, email, and phone number when registering or contacting us.",
+            ar: "نقوم بجمع البيانات التي تقدمها لنا مباشرة مثل الاسم، البريد الإلكتروني، ورقم الهاتف عند التسجيل أو التواصل معنا."
+        },
+        dataCollectionTitle: { en: "Data Collection", ar: "جمع البيانات" },
+
+        dataUsageTitle: { en: "Data Usage", ar: "استخدام البيانات" },
+        dataUsageText: {
+            en: "We use the data to provide our services, improve user experience, and send updates and offers related to our services.",
+            ar: "نستخدم البيانات لتقديم خدماتنا، تحسين تجربة المستخدم، وإرسال التحديثات والعروض المتعلقة بخدماتنا."
+        },
+        dataProtectionTitle: { en: "Data Protection", ar: "حماية البيانات" },
+        dataProtectionText: {
+            en: "We commit to technical and organizational measures to protect your data from unauthorized access, use, or disclosure.",
+            ar: "نلتزم باتخاذ التدابير التقنية والتنظيمية لحماية بياناتك من الوصول غير المصرح به أو الاستخدام أو الكشف."
+        },
+        cookiesTitle: { en: "Cookies", ar: "ملفات تعريف الارتباط" },
+        cookiesText: {
+            en: "We may use cookies to analyze performance, personalize content, and improve the user experience on our website.",
+            ar: "قد نستخدم ملفات تعريف الارتباط لتحليل الأداء، تخصيص المحتوى، وتحسين تجربة المستخدم على موقعنا."
+        },
+        dataSharingTitle: { en: "Data Sharing", ar: "مشاركة البيانات" },
+        dataSharingText: {
+            en: "We do not share your personal data with third parties except when necessary to provide the service or as required by law.",
+            ar: "لا نشارك بياناتك الشخصية مع أطراف ثالثة إلا إذا كان ذلك ضروريًا لتقديم الخدمة أو وفقًا للقانون."
+        },
+        userRightsTitle: { en: "User Rights", ar: "حقوق المستخدم" },
+        userRightsText: {
+            en: "You have the right to request access to your data, modify it, or delete it from our records at any time by contacting us.",
+            ar: "لديك الحق في طلب الوصول إلى بياناتك، تعديلها، أو حذفها من سجلاتنا في أي وقت عن طريق التواصل معنا."
+        },
+        policyUpdatesTitle: { en: "Policy Updates", ar: "تحديثات سياسة الخصوصية" },
+        policyUpdatesText: {
+            en: "We may update the privacy policy from time to time, and the new version will be available on this page.",
+            ar: "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر، وستكون النسخة الجديدة متاحة على هذه الصفحة."
+        },
         // Warehousing Detail Content
         warehousingDetailTitle: { en: "Integrated Warehousing Solutions", ar: "حلول التخزين المتكاملة" },
         warehousingExplain1: {
@@ -1202,5 +1260,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Console messages
 console.log('🚚 مرحباً بك في موقع دعن للخدمات اللوجستية!');
-console.log('📧 للتواصل: info@danlogistics.com');
+console.log('📧 للتواصل: info@dan-ls.com');
 console.log('🌐 الموقع تم تطويره بأحدث التقنيات');

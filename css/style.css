@@ -322,6 +322,14 @@ html[lang="en"] .dropdown-menu .dropdown-item:hover {
     background-image: url("../img/bg-warehousing.jpg");
 }
 
+.bg-faq {
+    background-image: url("../img/faq.jpg");
+}
+
+.bg-privacy {
+    background-image: url("../img/privacy.jpg");
+}
+
 .hero-section .container {
     position: relative;
     z-index: 2;
